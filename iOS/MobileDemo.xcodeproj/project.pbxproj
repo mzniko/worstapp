@@ -1,0 +1,434 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A82F14A19CA99A200036226 /* NRMADemoTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A82F14919CA99A200036226 /* NRMADemoTools.m */; };
+		3AA898BB19BA14CE004E0892 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898BA19BA14CE004E0892 /* Foundation.framework */; };
+		3AA898BD19BA14CE004E0892 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898BC19BA14CE004E0892 /* CoreGraphics.framework */; };
+		3AA898BF19BA14CE004E0892 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898BE19BA14CE004E0892 /* UIKit.framework */; };
+		3AA898C519BA14CE004E0892 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3AA898C319BA14CE004E0892 /* InfoPlist.strings */; };
+		3AA898C719BA14CE004E0892 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898C619BA14CE004E0892 /* main.m */; };
+		3AA898CB19BA14CE004E0892 /* MDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898CA19BA14CE004E0892 /* MDAppDelegate.m */; };
+		3AA898CE19BA14CE004E0892 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AA898CC19BA14CE004E0892 /* Main.storyboard */; };
+		3AA898D119BA14CE004E0892 /* MDIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898D019BA14CE004E0892 /* MDIntroVC.m */; };
+		3AA898D319BA14CE004E0892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA898D219BA14CE004E0892 /* Images.xcassets */; };
+		3AA898F119BA15EE004E0892 /* MDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898F019BA15EE004E0892 /* MDHomeVC.m */; };
+		3AA898F319BA16DD004E0892 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898F219BA16DD004E0892 /* NewRelicAgent.framework */; };
+		3AA898F919BA1BE8004E0892 /* MDSystemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898F819BA1BE8004E0892 /* MDSystemVC.m */; };
+		3AA898FC19BA1BF5004E0892 /* MDPremiseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898FB19BA1BF5004E0892 /* MDPremiseVC.m */; };
+		3AA898FE19BA1C71004E0892 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898FD19BA1C71004E0892 /* SystemConfiguration.framework */; };
+		3AA8990019BA1C78004E0892 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898FF19BA1C78004E0892 /* libz.dylib */; };
+		3AA8990219BA1C7F004E0892 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA8990119BA1C7F004E0892 /* CoreTelephony.framework */; };
+		79A51653FA7F409DAC2006FE /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 303703CBBAEA4657A37F689D /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		303703CBBAEA4657A37F689D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A82F14819CA99A200036226 /* NRMADemoTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRMADemoTools.h; sourceTree = "<group>"; };
+		3A82F14919CA99A200036226 /* NRMADemoTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMADemoTools.m; sourceTree = "<group>"; };
+		3AA898B719BA14CE004E0892 /* MobileDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AA898BA19BA14CE004E0892 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3AA898BC19BA14CE004E0892 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3AA898BE19BA14CE004E0892 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3AA898C219BA14CE004E0892 /* MobileDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MobileDemo-Info.plist"; sourceTree = "<group>"; };
+		3AA898C419BA14CE004E0892 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3AA898C619BA14CE004E0892 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3AA898C819BA14CE004E0892 /* MobileDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MobileDemo-Prefix.pch"; sourceTree = "<group>"; };
+		3AA898C919BA14CE004E0892 /* MDAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDAppDelegate.h; sourceTree = "<group>"; };
+		3AA898CA19BA14CE004E0892 /* MDAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDAppDelegate.m; sourceTree = "<group>"; };
+		3AA898CD19BA14CE004E0892 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3AA898CF19BA14CE004E0892 /* MDIntroVC.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MDIntroVC.h; sourceTree = "<group>"; };
+		3AA898D019BA14CE004E0892 /* MDIntroVC.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MDIntroVC.m; sourceTree = "<group>"; };
+		3AA898D219BA14CE004E0892 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3AA898D919BA14CE004E0892 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		3AA898EF19BA15EE004E0892 /* MDHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDHomeVC.h; sourceTree = "<group>"; };
+		3AA898F019BA15EE004E0892 /* MDHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDHomeVC.m; sourceTree = "<group>"; };
+		3AA898F219BA16DD004E0892 /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
+		3AA898F719BA1BE8004E0892 /* MDSystemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSystemVC.h; sourceTree = "<group>"; };
+		3AA898F819BA1BE8004E0892 /* MDSystemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSystemVC.m; sourceTree = "<group>"; };
+		3AA898FA19BA1BF5004E0892 /* MDPremiseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPremiseVC.h; sourceTree = "<group>"; };
+		3AA898FB19BA1BF5004E0892 /* MDPremiseVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDPremiseVC.m; sourceTree = "<group>"; };
+		3AA898FD19BA1C71004E0892 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3AA898FF19BA1C78004E0892 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3AA8990119BA1C7F004E0892 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		50967E8D325B4819854DAF5E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3AA898B419BA14CE004E0892 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA8990219BA1C7F004E0892 /* CoreTelephony.framework in Frameworks */,
+				3AA8990019BA1C78004E0892 /* libz.dylib in Frameworks */,
+				3AA898FE19BA1C71004E0892 /* SystemConfiguration.framework in Frameworks */,
+				3AA898BD19BA14CE004E0892 /* CoreGraphics.framework in Frameworks */,
+				3AA898BF19BA14CE004E0892 /* UIKit.framework in Frameworks */,
+				3AA898BB19BA14CE004E0892 /* Foundation.framework in Frameworks */,
+				3AA898F319BA16DD004E0892 /* NewRelicAgent.framework in Frameworks */,
+				79A51653FA7F409DAC2006FE /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A82F14719CA996E00036226 /* DemoTools */ = {
+			isa = PBXGroup;
+			children = (
+				3A82F14819CA99A200036226 /* NRMADemoTools.h */,
+				3A82F14919CA99A200036226 /* NRMADemoTools.m */,
+			);
+			name = DemoTools;
+			sourceTree = "<group>";
+		};
+		3AA898AE19BA14CE004E0892 = {
+			isa = PBXGroup;
+			children = (
+				3AA898C019BA14CE004E0892 /* MobileDemo */,
+				3AA898B919BA14CE004E0892 /* Frameworks */,
+				3AA898B819BA14CE004E0892 /* Products */,
+				50967E8D325B4819854DAF5E /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		3AA898B819BA14CE004E0892 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AA898B719BA14CE004E0892 /* MobileDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3AA898B919BA14CE004E0892 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3AA8990119BA1C7F004E0892 /* CoreTelephony.framework */,
+				3AA898FF19BA1C78004E0892 /* libz.dylib */,
+				3AA898FD19BA1C71004E0892 /* SystemConfiguration.framework */,
+				3AA898F219BA16DD004E0892 /* NewRelicAgent.framework */,
+				3AA898BA19BA14CE004E0892 /* Foundation.framework */,
+				3AA898BC19BA14CE004E0892 /* CoreGraphics.framework */,
+				3AA898BE19BA14CE004E0892 /* UIKit.framework */,
+				3AA898D919BA14CE004E0892 /* XCTest.framework */,
+				303703CBBAEA4657A37F689D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3AA898C019BA14CE004E0892 /* MobileDemo */ = {
+			isa = PBXGroup;
+			children = (
+				3A82F14719CA996E00036226 /* DemoTools */,
+				3AA898C919BA14CE004E0892 /* MDAppDelegate.h */,
+				3AA898CA19BA14CE004E0892 /* MDAppDelegate.m */,
+				3AA898CF19BA14CE004E0892 /* MDIntroVC.h */,
+				3AA898D019BA14CE004E0892 /* MDIntroVC.m */,
+				3AA898EF19BA15EE004E0892 /* MDHomeVC.h */,
+				3AA898F019BA15EE004E0892 /* MDHomeVC.m */,
+				3AA898F719BA1BE8004E0892 /* MDSystemVC.h */,
+				3AA898F819BA1BE8004E0892 /* MDSystemVC.m */,
+				3AA898FA19BA1BF5004E0892 /* MDPremiseVC.h */,
+				3AA898FB19BA1BF5004E0892 /* MDPremiseVC.m */,
+				3AA898CC19BA14CE004E0892 /* Main.storyboard */,
+				3AA898D219BA14CE004E0892 /* Images.xcassets */,
+				3AA898C119BA14CE004E0892 /* Supporting Files */,
+			);
+			path = MobileDemo;
+			sourceTree = "<group>";
+		};
+		3AA898C119BA14CE004E0892 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3AA898C219BA14CE004E0892 /* MobileDemo-Info.plist */,
+				3AA898C319BA14CE004E0892 /* InfoPlist.strings */,
+				3AA898C619BA14CE004E0892 /* main.m */,
+				3AA898C819BA14CE004E0892 /* MobileDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3AA898B619BA14CE004E0892 /* MobileDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3AA898E919BA14CE004E0892 /* Build configuration list for PBXNativeTarget "MobileDemo" */;
+			buildPhases = (
+				3A51431B0DC540FF9D15A476 /* Check Pods Manifest.lock */,
+				3AA898B319BA14CE004E0892 /* Sources */,
+				3AA898B419BA14CE004E0892 /* Frameworks */,
+				3AA898B519BA14CE004E0892 /* Resources */,
+				268F994F251744DA89EDBAE0 /* Copy Pods Resources */,
+				3AA8990619BA2A11004E0892 /* NR Phase */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileDemo;
+			productName = MobileDemo;
+			productReference = 3AA898B719BA14CE004E0892 /* MobileDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3AA898AF19BA14CE004E0892 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = MD;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = newrelic;
+			};
+			buildConfigurationList = 3AA898B219BA14CE004E0892 /* Build configuration list for PBXProject "MobileDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3AA898AE19BA14CE004E0892;
+			productRefGroup = 3AA898B819BA14CE004E0892 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3AA898B619BA14CE004E0892 /* MobileDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3AA898B519BA14CE004E0892 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3AA898D319BA14CE004E0892 /* Images.xcassets in Resources */,
+				3AA898C519BA14CE004E0892 /* InfoPlist.strings in Resources */,
+				3AA898CE19BA14CE004E0892 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		268F994F251744DA89EDBAE0 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A51431B0DC540FF9D15A476 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3AA8990619BA2A11004E0892 /* NR Phase */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "NR Phase";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\nexport DSYM_UPLOAD_URL=\"staging-symbol-upload-api.awsdev.nr-ops.net/symbol\"\n/bin/bash \"${SCRIPT}\" \"AA8af476cb7cab516d0e97bf9b429c51cfce88f672\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3AA898B319BA14CE004E0892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A82F14A19CA99A200036226 /* NRMADemoTools.m in Sources */,
+				3AA898F919BA1BE8004E0892 /* MDSystemVC.m in Sources */,
+				3AA898FC19BA1BF5004E0892 /* MDPremiseVC.m in Sources */,
+				3AA898C719BA14CE004E0892 /* main.m in Sources */,
+				3AA898D119BA14CE004E0892 /* MDIntroVC.m in Sources */,
+				3AA898F119BA15EE004E0892 /* MDHomeVC.m in Sources */,
+				3AA898CB19BA14CE004E0892 /* MDAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3AA898C319BA14CE004E0892 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA898C419BA14CE004E0892 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3AA898CC19BA14CE004E0892 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3AA898CD19BA14CE004E0892 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3AA898E719BA14CE004E0892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3AA898E819BA14CE004E0892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3AA898EA19BA14CE004E0892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50967E8D325B4819854DAF5E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobileDemo/MobileDemo-Prefix.pch";
+				INFOPLIST_FILE = "MobileDemo/MobileDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3AA898EB19BA14CE004E0892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 50967E8D325B4819854DAF5E /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MobileDemo/MobileDemo-Prefix.pch";
+				INFOPLIST_FILE = "MobileDemo/MobileDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3AA898B219BA14CE004E0892 /* Build configuration list for PBXProject "MobileDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA898E719BA14CE004E0892 /* Debug */,
+				3AA898E819BA14CE004E0892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3AA898E919BA14CE004E0892 /* Build configuration list for PBXNativeTarget "MobileDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3AA898EA19BA14CE004E0892 /* Debug */,
+				3AA898EB19BA14CE004E0892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3AA898AF19BA14CE004E0892 /* Project object */;
+}
