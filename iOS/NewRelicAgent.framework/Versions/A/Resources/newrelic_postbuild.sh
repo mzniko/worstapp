@@ -14,7 +14,7 @@
 #     application token from your New Relic dashboard for the app in question.
 #
 #SCRIPT=`/usr/bin/find "${SRCROOT}" -name newrelic_postbuild.sh | head -n 1`
-#/bin/bash "${SCRIPT}" "PUT_NEW_RELIC_APP_TOKEN_HERE"
+#/bin/sh "${SCRIPT}" "PUT_NEW_RELIC_APP_TOKEN_HERE"
 #
 # Optional:
 # DSYM_UPLOAD_URL - define this environment variable to override the New Relic server hostname
@@ -48,10 +48,10 @@ DSYM_UUIDS=`xcrun dwarfdump --uuid "$DSYM_SRC" | tr '[:upper:]' '[:lower:]' | tr
 
 DSYM_ARCHIVE_PATH="/tmp/$DWARF_DSYM_FILE_NAME.zip"
 
-if [ "$EFFECTIVE_PLATFORM_NAME" == "-iphonesimulator" ]; then
-	echo "New Relic: Skipping automatic upload of simulator build symbols"
-	exit 0
-fi
+#if [ "$EFFECTIVE_PLATFORM_NAME" == "-iphonesimulator" ]; then
+#	echo "New Relic: Skipping automatic upload of simulator build symbols"
+#	exit 0
+#fi
 
 echo "New Relic: Archiving ${DSYM_SRC} to ${DSYM_ARCHIVE_PATH}"
 /usr/bin/zip --recurse-paths --quiet "${DSYM_ARCHIVE_PATH}" "${DSYM_SRC}"

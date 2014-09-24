@@ -185,6 +185,11 @@
 				CLASSPREFIX = MD;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = newrelic;
+				TargetAttributes = {
+					3AA898B619BA14CE004E0892 = {
+						DevelopmentTeam = RQZ9D969HD;
+					};
+				};
 			};
 			buildConfigurationList = 3AA898B219BA14CE004E0892 /* Build configuration list for PBXProject "MobileDemo" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -377,6 +382,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -385,6 +392,7 @@
 				GCC_PREFIX_HEADER = "MobileDemo/MobileDemo-Prefix.pch";
 				INFOPLIST_FILE = "MobileDemo/MobileDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,6 +403,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -403,6 +413,7 @@
 				GCC_PREFIX_HEADER = "MobileDemo/MobileDemo-Prefix.pch";
 				INFOPLIST_FILE = "MobileDemo/MobileDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -24,6 +24,7 @@ typedef enum {
 + (NSString *)deviceModel;
 + (NSString *)agentVersion;
 + (NSString *)deviceId;
++ (NSString *)osVersion;
 @end
 
 @interface NRMAAgentConfiguration : NSObject
@@ -59,6 +60,7 @@ BOOL NRMASwizzleOrAddMethod(id self, SEL origSelector, SEL newSelector, IMP theI
 + (IMP)setDeviceModel:(NSString *)model;
 + (IMP)setAgentVersion:(NSString *)version;
 + (IMP)setDeviceId:(NSString *)uuid;
++ (IMP)setOsVersion:(NSString *)uuid;
 
 + (void)forceReconnect;
 
@@ -67,5 +69,6 @@ BOOL NRMASwizzleOrAddMethod(id self, SEL origSelector, SEL newSelector, IMP theI
 + (void)unsetDeviceModel:(IMP)originalImp;
 + (void)unsetAgentVersion:(IMP)originalImp;
 + (void)unsetDeviceId:(IMP)originalImp;
++ (void)unsetOsVersion:(IMP)originalImp;
 
 @end

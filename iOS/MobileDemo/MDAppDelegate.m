@@ -19,10 +19,8 @@
 
 @implementation MDAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+- (void)setupDemoAppState
 {
-    // Override point for customization after application launch.
-
     NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:@"CustomAppVersion"];
     if (! version) {
         version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
@@ -33,6 +31,67 @@
     }
 
     [NRMADemoTools setApplicationVersion:version];
+
+    sranddev();
+
+    // random hardware...
+    switch (rand() % 13) {
+        case 0: [NRMADemoTools setDeviceModel:@"iPhone4,1"]; break;
+        case 1: [NRMADemoTools setDeviceModel:@"iPhone5,1"]; break;
+        case 2: [NRMADemoTools setDeviceModel:@"iPhone5,2"]; break;
+        case 3: [NRMADemoTools setDeviceModel:@"iPhone5,3"]; break;
+        case 4: [NRMADemoTools setDeviceModel:@"iPhone6,1"]; break;
+        case 5: [NRMADemoTools setDeviceModel:@"iPod5,1"]; break;
+        case 6: [NRMADemoTools setDeviceModel:@"iPod6,1"]; break;
+        case 7: [NRMADemoTools setDeviceModel:@"iPad3,1"]; break;
+        case 8: [NRMADemoTools setDeviceModel:@"iPad4,1"]; break;
+        case 9: [NRMADemoTools setDeviceModel:@"iPad4,5"]; break;
+        case 10: [NRMADemoTools setDeviceModel:@"iPad2,5"]; break;
+        case 11: [NRMADemoTools setDeviceModel:@"iPhone5,3"]; break;
+        case 12: [NRMADemoTools setDeviceModel:@"iPhone6,1"]; break;
+    }
+
+    // random OS
+    switch (rand() % 10) {
+        case 0: [NRMADemoTools setOsVersion:@"7.0.1"]; break;
+        case 1: [NRMADemoTools setOsVersion:@"7.1.1"]; break;
+        case 2: [NRMADemoTools setOsVersion:@"7.1.0"]; break;
+        case 3: [NRMADemoTools setOsVersion:@"7.1.2"]; break;
+        case 4: [NRMADemoTools setOsVersion:@"7.1.2"]; break;
+        case 5: [NRMADemoTools setOsVersion:@"7.1.2"]; break;
+        case 6: [NRMADemoTools setOsVersion:@"7.1.2"]; break;
+        case 7: [NRMADemoTools setOsVersion:@"7.1.2"]; break;
+        case 8: [NRMADemoTools setOsVersion:@"8.0"]; break;
+        case 9: [NRMADemoTools setOsVersion:@"8.0"]; break;
+    }
+
+    // random carrier
+    switch (rand() % 11) {
+        case 0: [NRMADemoTools setCarrierName:@"AT&T"]; break;
+        case 1: [NRMADemoTools setCarrierName:@"Verizon"]; break;
+        case 2: [NRMADemoTools setCarrierName:@"AT&T"]; break;
+        case 3: [NRMADemoTools setCarrierName:@"Verizon"]; break;
+        case 4: [NRMADemoTools setCarrierName:@"T-Mobile"]; break;
+        case 5: [NRMADemoTools setCarrierName:@"Sprint"]; break;
+        case 6: [NRMADemoTools setCarrierName:@"O2"]; break;
+        case 7: [NRMADemoTools setCarrierName:@"wifi"]; break;
+        case 8: [NRMADemoTools setCarrierName:@"wifi"]; break;
+        case 9: [NRMADemoTools setCarrierName:@"wifi"]; break;
+        case 10: [NRMADemoTools setCarrierName:@"wifi"]; break;
+    }
+
+
+    // random uuid
+    CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
+    [NRMADemoTools setDeviceId:(NSString*)CFBridgingRelease(CFUUIDCreateString(kCFAllocatorDefault, uuid))];
+    CFRelease(uuid);
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // Override point for customization after application launch.
+    [self setupDemoAppState];
+
     [NRLogger setLogLevels:NRLogLevelALL];
 
     // https://staging.newrelic.com/accounts/340262/mobile/64968/
@@ -63,6 +122,9 @@
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
+    [self setupDemoAppState];
+    [NRMADemoTools forceReconnect];
+
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 

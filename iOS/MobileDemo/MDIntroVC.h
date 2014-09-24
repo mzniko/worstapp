@@ -11,6 +11,7 @@
 @interface MDIntroVC : UIViewController
 
 @property (nonatomic, strong) IBOutlet UILabel *screenLabel;
+@property (nonatomic, strong) IBOutlet UITextView *appInfo;
 
 - (IBAction)changeVersionTapped:(id)sender;
 

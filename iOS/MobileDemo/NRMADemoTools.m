@@ -63,6 +63,18 @@
 
 }
 
++ (IMP)setOsVersion:(NSString *)version
+{
+    __block NSString *value = [version copy];
+
+    return (IMP) NRMAReplaceClassMethod([NewRelicInternalUtils class],
+                                        @selector(osVersion),
+                                        imp_implementationWithBlock(^{ return value; }));
+
+    NRMAReplaceInstanceMethod([UIDevice class], @selector(systemVersion),
+                              imp_implementationWithBlock(^{ return value; }));    
+}
+
 
 
 + (void)unsetCarrierName:(IMP)originalImp
@@ -101,6 +113,14 @@
                            @selector(deviceId),
                            originalImp);
     
+}
+
++ (void)unsetOsVersion:(IMP)originalImp
+{
+    NRMAReplaceClassMethod([NewRelicInternalUtils class],
+                           @selector(osVersion),
+                           originalImp);
+
 }
 
 + (void)forceReconnect

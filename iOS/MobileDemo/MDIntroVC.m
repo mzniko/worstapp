@@ -28,7 +28,7 @@ extern NSString *__NRMA__customAppVersionString;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self updateAppVersionLabel];
+    [self updateAppInfo];
 
     [self parseDataSymbols];
 }
@@ -78,13 +78,18 @@ extern NSString *__NRMA__customAppVersionString;
     [NRMADemoTools forceReconnect];
 
     if ([self isViewLoaded]) {
-        [self updateAppVersionLabel];
+        [self updateAppInfo];
     }
 }
 
-- (void)updateAppVersionLabel
+- (void)updateAppInfo
 {
-    self.screenLabel.text = [NSString stringWithFormat:@"Intro Screen v%@", __NRMA__customAppVersionString];
+    self.appInfo.text = [NSString stringWithFormat:@"Version\t%@\nOS\t%@\nModel\t%@\nCarrier\t%@\nUDID\t%@",
+                         __NRMA__customAppVersionString,
+                         [NewRelicInternalUtils osVersion],
+                         [NewRelicInternalUtils deviceModel],
+                         [NewRelicInternalUtils carrierName],
+                         [NewRelicInternalUtils deviceId]];
 }
 
 - (IBAction)loginTapped:(id)sender
