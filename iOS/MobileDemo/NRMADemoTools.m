@@ -8,6 +8,14 @@
 
 #import "NRMADemoTools.h"
 
+NSString *__NRMA_FAKE_OS = @"1.0";
+NSString *__NRMA_FAKE_OS_imp() {
+    return [__NRMA_FAKE_OS copy];
+}
+NSString *__NRMA_FAKE_MODEL = @"iPhone1,1";
+NSString *__NRMA_FAKE_MODEL_imp() {
+    return [__NRMA_FAKE_MODEL copy];
+}
 
 
 @implementation NRMADemoTools
@@ -35,11 +43,11 @@
 
 + (IMP)setDeviceModel:(NSString *)model
 {
-    __block NSString *value = [model copy];
+    __NRMA_FAKE_MODEL = [model copy];
 
     return (IMP) NRMAReplaceClassMethod([NewRelicInternalUtils class],
                            @selector(deviceModel),
-                           imp_implementationWithBlock(^{ return value; }));
+                           (IMP)__NRMA_FAKE_MODEL_imp);
 
 }
 
@@ -65,14 +73,9 @@
 
 + (IMP)setOsVersion:(NSString *)version
 {
-    __block NSString *value = [version copy];
+    __NRMA_FAKE_OS = [version copy];
 
-    return (IMP) NRMAReplaceClassMethod([NewRelicInternalUtils class],
-                                        @selector(osVersion),
-                                        imp_implementationWithBlock(^{ return value; }));
-
-    NRMAReplaceInstanceMethod([UIDevice class], @selector(systemVersion),
-                              imp_implementationWithBlock(^{ return value; }));    
+    return (IMP) NRMAReplaceInstanceMethod([UIDevice class], @selector(systemVersion), (IMP)__NRMA_FAKE_OS_imp);
 }
 
 

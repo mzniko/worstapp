@@ -32,7 +32,10 @@
     [NSThread sleepForTimeInterval:1.3];
     NR_INTERACTION_STOP(interaction);
 
-    [self performSelector:NSSelectorFromString(@"hoohahMimau:")];
+    NSString *s = @"hoohahMimauAppium:";
+
+    s = @"honkey:";
+    [NSString performSelector:NSSelectorFromString(s)];
 }
 
 @end
