@@ -15,7 +15,7 @@ class MobileDemoTests(unittest.TestCase):
         desired_caps['platformName'] = 'iOS'
         desired_caps['platformVersion'] = '7.1'
         desired_caps['deviceName'] = 'iPhone Simulator'
-        desired_caps['app'] = os.path.abspath(os.path.join(os.path.dirname(__file__),'/Users/mobile/Library/Developer/Xcode/DerivedData/MobileDemo-fejfetydctgjmcciescodczoczep/Build/Products/Debug-iphonesimulator/MobileDemo.app'))
+        desired_caps['app'] = os.path.abspath(os.path.join(os.path.dirname(__file__),'/Users/mobile/Desktop/MobileDemo.app'))
         desired_caps['appPackage'] = 'com.newrelic.MobileDemo'
 
         self.driver = webdriver.Remote('http://localhost:4723/wd/hub', desired_caps)
