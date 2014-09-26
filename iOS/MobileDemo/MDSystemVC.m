@@ -33,7 +33,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"lp on fire" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -44,7 +44,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"The devil is in the details" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -54,7 +54,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"It can only be attributed to human error" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -64,7 +64,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"I don't wish to know that" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -74,7 +74,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"It's only your word against mine" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -83,7 +83,7 @@
 - (NSString *)randomException
 {
     switch (rand()%5) {
-        case 0: return @"InvalidArgumentException";
+        case 0: return @"PCLoadLetterException";
         case 1: return @"HorribleKeyException";
         case 2: return @"MisplacedEndeavourException";
         case 3: return @"RuntimeHiccoughException";

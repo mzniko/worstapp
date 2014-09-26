@@ -32,7 +32,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"What of the future?" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -43,7 +43,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"Unknown user" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -53,7 +53,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"no sense in pretending!" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -63,7 +63,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"Nonsense in BASIC" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -73,7 +73,7 @@
     [NSThread sleepForTimeInterval:0.3];
     if (self.oopsSwitch.on) {
         NSString *exception = self.randomException;
-        [[NSException exceptionWithName:exception reason:@"An app problem" userInfo:nil] raise];
+        [[NSException exceptionWithName:exception reason:@"Guru Meditation Error" userInfo:nil] raise];
     }
     NR_TRACE_METHOD_STOP;
 }
@@ -84,8 +84,8 @@
     switch (rand()%5) {
         case 0: return @"InvalidArgumentException";
         case 1: return @"HorribleKeyException";
-        case 2: return @"MisplacedEndeavourException";
-        case 3: return @"RuntimeHiccoughException";
+        case 2: return @"ImpossibleException";
+        case 3: return @"ClosedDatabaseException";
         case 4: return @"ExceptionalException";
     }
 

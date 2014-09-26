@@ -34,7 +34,7 @@
 
     NSString *s = @"hoohahMimauAppium:";
 
-    s = @"honkey:";
+    s = @"PC_LOAD_LETTER:";
     [NSString performSelector:NSSelectorFromString(s)];
 }
 
