@@ -40,7 +40,7 @@ fi
 API_KEY=$1
 BUILD_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleVersion' ${INFOPLIST_FILE})
 APP_VERSION=$(/usr/libexec/PlistBuddy -c 'Print CFBundleShortVersionString' ${INFOPLIST_FILE})
-DSYM_SRC=${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}
+DSYM_SRC="${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}"
 
 DSYM_UUIDS=`xcrun dwarfdump --uuid "$DSYM_SRC" | tr '[:upper:]' '[:lower:]' | tr -d '-'| awk '{print $2}' | xargs | sed 's/ /,/g'`
 
@@ -53,11 +53,11 @@ DSYM_ARCHIVE_PATH="/tmp/$DWARF_DSYM_FILE_NAME.zip"
 #	exit 0
 #fi
 
-echo "New Relic: Archiving ${DSYM_SRC} to ${DSYM_ARCHIVE_PATH}"
+echo "New Relic: Archiving \"${DSYM_SRC}\" to \"${DSYM_ARCHIVE_PATH}\""
 /usr/bin/zip --recurse-paths --quiet "${DSYM_ARCHIVE_PATH}" "${DSYM_SRC}"
 
-if [ ! -f $DSYM_ARCHIVE_PATH ]; then
-	echo "New Relic: Failed to archive ${DSYM_SRC} to ${DSYM_ARCHIVE_PATH}"
+if [ ! -f "$DSYM_ARCHIVE_PATH" ]; then
+	echo "New Relic: Failed to archive \"${DSYM_SRC}\" to \"${DSYM_ARCHIVE_PATH}\""
 	exit -3
 fi
 
@@ -68,12 +68,12 @@ if [ $SERVER_RESPONSE -eq 201 ]; then
     echo "New Relic: Successfully uploaded debug symbols"
 else
     if [ $SERVER_RESPONSE -eq 409 ]; then
-        echo "New Relic: dSYM ${DSYM_UUIDS} already uploaded"
+        echo "New Relic: dSYM \"${DSYM_UUIDS}\" already uploaded"
     else
         echo "New Relic: ERROR ${SERVER_RESPONSE} while uploading ${DSYM_ARCHIVE_PATH} to ${DSYM_ARCHIVE_PATH}"
         exit -4
     fi
 fi
 
-/bin/rm -f ${DSYM_ARCHIVE_PATH}
+/bin/rm -f \"${DSYM_ARCHIVE_PATH}\"
 exit 0
