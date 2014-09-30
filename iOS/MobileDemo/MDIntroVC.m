@@ -67,13 +67,22 @@ extern NSString *__NRMA__customAppVersionString;
 
 - (IBAction)changeVersionTapped:(id)sender
 {
-    sranddev();
-    int appMajor = rand() % 8 + 1;
-    int appMinor = rand() % 80;
-    NSString *appVersion = [NSString stringWithFormat:@"%d.%02d", appMajor, appMinor];
-    [NRMADemoTools setApplicationVersion:appVersion];
+    NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:@"CustomAppVersion"];
+    if (! version) {
+        version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
+        if (! [version length]) {
+            version = @"1.0";
+        }
+    }
 
-    [[NSUserDefaults standardUserDefaults] setValue:appVersion forKey:@"CustomAppVersion"];
+    NSMutableArray *components = [[version componentsSeparatedByString:@"."] mutableCopy];
+    NSInteger newValue = [[components lastObject] integerValue] + 1;
+    components[components.count-1] = [NSString stringWithFormat:@"%02d", newValue];
+    version = [components componentsJoinedByString:@"."];
+
+    [[NSUserDefaults standardUserDefaults] setValue:version forKey:@"CustomAppVersion"];
+
+    [NRMADemoTools setApplicationVersion:version];
 
     [NRMADemoTools forceReconnect];
 

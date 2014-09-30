@@ -26,6 +26,7 @@ class MobileDemoTests(unittest.TestCase):
     #     self.driver.quit()
 
     def test01(self):
+        # Non-crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -46,6 +47,7 @@ class MobileDemoTests(unittest.TestCase):
         sleep(7)
 
     def test02(self):
+        # Non-crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -64,6 +66,7 @@ class MobileDemoTests(unittest.TestCase):
         sleep(7)
 
     def test03(self):
+        # MDHomeVC crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -82,10 +85,11 @@ class MobileDemoTests(unittest.TestCase):
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
         self.driver.find_element_by_name("System").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
-        self.driver.find_element_by_name("Failure to Screen").click()
+        self.driver.find_element_by_name("This will crash").click()
         sleep(7)
 
     def test04(self):
+        # Non-crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -106,6 +110,7 @@ class MobileDemoTests(unittest.TestCase):
         sleep(7)
 
     def test05(self):
+        # Non-crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -124,6 +129,7 @@ class MobileDemoTests(unittest.TestCase):
         sleep(7)
 
     def test06(self):
+        # MDHomeVC crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -142,10 +148,11 @@ class MobileDemoTests(unittest.TestCase):
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
         self.driver.find_element_by_name("System").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
-        self.driver.find_element_by_name("Failure to Screen").click()
+        self.driver.find_element_by_name("This will crash").click()
         sleep(7)
 
     def test07(self):
+        # MDPremiseVC crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -160,6 +167,7 @@ class MobileDemoTests(unittest.TestCase):
         sleep(7)
 
     def test08(self):
+        # MDSystemVC crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -178,6 +186,7 @@ class MobileDemoTests(unittest.TestCase):
         sleep(7)
 
     def test09(self):
+        # MDHomeVC crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.find_element_by_name("Premise").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
@@ -196,10 +205,11 @@ class MobileDemoTests(unittest.TestCase):
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
         self.driver.find_element_by_name("System").click()
         self.driver.find_element_by_xpath("//UIAApplication[1]/UIAWindow[1]/UIAButton[5]").click()
-        self.driver.find_element_by_name("Failure to Screen").click()
+        self.driver.find_element_by_name("This will crash").click()
         sleep(7)
 
     def test10(self):
+        # Non-crashing flow...
         self.driver.find_element_by_name("Login").click()
         self.driver.background_app(4)
         self.driver.find_element_by_name("Premise").click()
