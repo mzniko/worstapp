@@ -10,9 +10,10 @@
 #import "MDHomeVC.h"
 #import "MBProgressHUD.h"
 #import "NRMADemoTools.h"
+#import "MDActionTableDataSource.h"
 
 @interface MDIntroVC ()
-
+@property (strong) MDActionTableDataSource *actionDataSource;
 @end
 
 
@@ -20,10 +21,19 @@ extern NSString *__NRMA__customAppVersionString;
 
 @implementation MDIntroVC
 
+@synthesize actionDataSource;
+@synthesize actionTableView;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (! self.actionDataSource) {
+        self.actionDataSource = [[MDActionTableDataSource alloc] init];
+    }
+
 	// Do any additional setup after loading the view, typically from a nib.
+    self.actionTableView.dataSource = self.actionDataSource;
+    self.actionTableView.delegate = self;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -65,6 +75,31 @@ extern NSString *__NRMA__customAppVersionString;
     // Dispose of any resources that can be recreated.
 }
 
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    NSString *className = [self.actionDataSource classNameForActionAtIndexPath:indexPath];
+
+    UIViewController *vc = nil;
+
+    if (className.length > 0) {
+        vc = [[NSClassFromString(className) alloc] init];
+        if (vc) {
+            [self presentViewController:vc animated:YES completion:nil];
+        }
+        else {
+            [[[UIAlertView alloc] initWithTitle:@"Coming soon"
+                                        message:@"This feature is imminent, hang tight..."
+                                       delegate:nil
+                              cancelButtonTitle:@"<< ☹ >>"
+                              otherButtonTitles:nil] show];
+        }
+    }
+
+    [tableView deselectRowAtIndexPath:indexPath animated:(vc != nil)];
+}
+
+
 - (IBAction)changeVersionTapped:(id)sender
 {
     NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:@"CustomAppVersion"];
@@ -93,7 +128,7 @@ extern NSString *__NRMA__customAppVersionString;
 
 - (void)updateAppInfo
 {
-    self.appInfo.text = [NSString stringWithFormat:@"Version\t%@\nOS\t%@\nModel\t%@\nCarrier\t%@\nUDID\t%@",
+    self.appInfo.text = [NSString stringWithFormat:@"Version\t%@\nOS\t\t%@\nModel\t%@\nCarrier\t%@\nUDID\t%@",
                          __NRMA__customAppVersionString,
                          [NewRelicInternalUtils osVersion],
                          [NewRelicInternalUtils deviceModel],

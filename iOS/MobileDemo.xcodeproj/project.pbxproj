@@ -23,6 +23,7 @@
 		3A56475B19DB42800064B898 /* AppIcon76x76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56474B19DB42800064B898 /* AppIcon76x76@2x.png */; };
 		3A56475C19DB42800064B898 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56474C19DB42800064B898 /* iTunesArtwork.png */; };
 		3A56475D19DB42800064B898 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56474D19DB42800064B898 /* iTunesArtwork@2x.png */; };
+		3A56476019DB5AA10064B898 /* MDActionTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A56475F19DB5AA10064B898 /* MDActionTableDataSource.m */; };
 		3A82F14A19CA99A200036226 /* NRMADemoTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A82F14919CA99A200036226 /* NRMADemoTools.m */; };
 		3AA898BB19BA14CE004E0892 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898BA19BA14CE004E0892 /* Foundation.framework */; };
 		3AA898BD19BA14CE004E0892 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898BC19BA14CE004E0892 /* CoreGraphics.framework */; };
@@ -61,6 +62,8 @@
 		3A56474B19DB42800064B898 /* AppIcon76x76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon76x76@2x.png"; sourceTree = "<group>"; };
 		3A56474C19DB42800064B898 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = iTunesArtwork.png; sourceTree = "<group>"; };
 		3A56474D19DB42800064B898 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
+		3A56475E19DB5AA10064B898 /* MDActionTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDActionTableDataSource.h; sourceTree = "<group>"; };
+		3A56475F19DB5AA10064B898 /* MDActionTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDActionTableDataSource.m; sourceTree = "<group>"; };
 		3A82F14819CA99A200036226 /* NRMADemoTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRMADemoTools.h; sourceTree = "<group>"; };
 		3A82F14919CA99A200036226 /* NRMADemoTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMADemoTools.m; sourceTree = "<group>"; };
 		3AA898B719BA14CE004E0892 /* MobileDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,6 +197,8 @@
 				3AA898CC19BA14CE004E0892 /* Main.storyboard */,
 				3AA898D219BA14CE004E0892 /* Images.xcassets */,
 				3AA898C119BA14CE004E0892 /* Supporting Files */,
+				3A56475E19DB5AA10064B898 /* MDActionTableDataSource.h */,
+				3A56475F19DB5AA10064B898 /* MDActionTableDataSource.m */,
 			);
 			path = MobileDemo;
 			sourceTree = "<group>";
@@ -352,6 +357,7 @@
 				3AA898C719BA14CE004E0892 /* main.m in Sources */,
 				3AA898D119BA14CE004E0892 /* MDIntroVC.m in Sources */,
 				3AA898F119BA15EE004E0892 /* MDHomeVC.m in Sources */,
+				3A56476019DB5AA10064B898 /* MDActionTableDataSource.m in Sources */,
 				3AA898CB19BA14CE004E0892 /* MDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

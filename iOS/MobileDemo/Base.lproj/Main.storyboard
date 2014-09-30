@@ -21,7 +21,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MDIntroVC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HTO-wQ-7Dg">
-                                <rect key="frame" x="20" y="38" width="280" height="21"/>
+                                <rect key="frame" x="213" y="37" width="87" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -50,43 +50,44 @@
                                 </connections>
                             </button>
                             <textView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rud-QG-MTb">
-                                <rect key="frame" x="20" y="67" width="280" height="96"/>
+                                <rect key="frame" x="20" y="20" width="280" height="96"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="N4R-Fi-6Dj">
-                                <rect key="frame" x="0.0" y="171" width="320" height="339"/>
+                            <tableView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="N4R-Fi-6Dj">
+                                <rect key="frame" x="0.0" y="124" width="320" height="339"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="N4R-Fi-6Dj" firstAttribute="top" secondItem="Rud-QG-MTb" secondAttribute="bottom" constant="8" id="7ZB-qq-yQ2"/>
+                            <constraint firstItem="Rud-QG-MTb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="4Wh-fq-sgT"/>
                             <constraint firstAttribute="trailing" secondItem="9ui-lx-IAC" secondAttribute="trailing" constant="20" id="FY6-QD-nPh"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="veR-IP-cAn" secondAttribute="bottom" id="Fd0-v2-J7Q"/>
                             <constraint firstAttribute="trailing" secondItem="Rud-QG-MTb" secondAttribute="trailing" constant="20" id="Jqm-7r-TnO"/>
                             <constraint firstItem="veR-IP-cAn" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="Lpg-RT-3aM"/>
-                            <constraint firstItem="Rud-QG-MTb" firstAttribute="top" secondItem="HTO-wQ-7Dg" secondAttribute="bottom" constant="8" id="P5M-fp-0Lm"/>
+                            <constraint firstAttribute="trailing" secondItem="HTO-wQ-7Dg" secondAttribute="trailing" constant="20" id="Nrv-3K-Sh9"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="V3q-o0-FAX" secondAttribute="bottom" constant="20" id="Pr1-pk-S3z"/>
                             <constraint firstItem="9ui-lx-IAC" firstAttribute="top" secondItem="N4R-Fi-6Dj" secondAttribute="bottom" constant="8" id="Uqz-Ec-B8W"/>
-                            <constraint firstAttribute="trailing" secondItem="HTO-wQ-7Dg" secondAttribute="trailing" constant="20" id="Xj3-da-Q3e"/>
                             <constraint firstAttribute="trailing" secondItem="veR-IP-cAn" secondAttribute="trailing" id="YD5-II-ZQp"/>
                             <constraint firstItem="veR-IP-cAn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Z0Z-C8-56v"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="9ui-lx-IAC" secondAttribute="bottom" constant="20" id="Zlw-6N-kyn"/>
+                            <constraint firstItem="Rud-QG-MTb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="bnK-YB-NaP"/>
                             <constraint firstItem="HTO-wQ-7Dg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="cCh-ct-Wgo"/>
+                            <constraint firstItem="N4R-Fi-6Dj" firstAttribute="top" secondItem="Rud-QG-MTb" secondAttribute="bottom" constant="-20" id="dVl-8b-y7l"/>
                             <constraint firstAttribute="trailing" secondItem="N4R-Fi-6Dj" secondAttribute="trailing" id="flk-0w-4Db"/>
-                            <constraint firstItem="HTO-wQ-7Dg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="ftf-9O-o39"/>
                             <constraint firstItem="N4R-Fi-6Dj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="j29-6l-j1k"/>
-                            <constraint firstItem="Rud-QG-MTb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="w4i-Ym-WlG"/>
+                            <constraint firstItem="Rud-QG-MTb" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="tj9-T8-OeC"/>
                             <constraint firstItem="V3q-o0-FAX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="zgm-wg-0rl"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
                     <connections>
+                        <outlet property="actionTableView" destination="N4R-Fi-6Dj" id="x2K-gl-V6l"/>
                         <outlet property="appInfo" destination="Rud-QG-MTb" id="uLn-DF-YsA"/>
                         <outlet property="screenLabel" destination="HTO-wQ-7Dg" id="Fz0-4S-FmE"/>
                     </connections>
@@ -98,7 +99,7 @@
         <!--HomeVC - HomeVC-->
         <scene sceneID="DZb-GZ-I9j">
             <objects>
-                <viewController storyboardIdentifier="MDHomeVC" title="HomeVC" id="0kJ-AZ-Iur" customClass="MDHomeVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MDHomeVC" title="HomeVC" modalTransitionStyle="flipHorizontal" id="0kJ-AZ-Iur" customClass="MDHomeVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="i30-Qq-iVZ"/>
                         <viewControllerLayoutGuide type="bottom" id="ZMc-oa-6OQ"/>
@@ -190,7 +191,7 @@
         <!--PremiseVC - Premise Screen-->
         <scene sceneID="Jse-jd-OBn">
             <objects>
-                <viewController title="Premise Screen" id="7gH-52-Mnm" customClass="MDPremiseVC" sceneMemberID="viewController">
+                <viewController title="Premise Screen" modalTransitionStyle="crossDissolve" id="7gH-52-Mnm" customClass="MDPremiseVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="v41-1T-b4A"/>
                         <viewControllerLayoutGuide type="bottom" id="jka-fJ-3N9"/>
@@ -266,7 +267,7 @@
         <!--SystemVC - System Screen-->
         <scene sceneID="hQC-nm-mY7">
             <objects>
-                <viewController title="System Screen" id="T5D-pa-EBp" customClass="MDSystemVC" sceneMemberID="viewController">
+                <viewController title="System Screen" modalTransitionStyle="crossDissolve" id="T5D-pa-EBp" customClass="MDSystemVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="X7O-mN-YYz"/>
                         <viewControllerLayoutGuide type="bottom" id="qYM-kz-FM2"/>
