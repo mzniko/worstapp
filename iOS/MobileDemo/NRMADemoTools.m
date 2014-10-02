@@ -17,12 +17,16 @@ NSString *__NRMA_FAKE_MODEL_imp() {
     return [__NRMA_FAKE_MODEL copy];
 }
 
+extern NSString *__NRMA__customAppVersionString;
+
 
 @implementation NRMADemoTools
 
 + (void)setApplicationVersion:(NSString *)version
 {
     [NRMAAgentConfiguration setApplicationVersion:version];
+#pragma warning this might no longer be needed for the agent version spoofing, but the demo app still relies on it
+    __NRMA__customAppVersionString = version;
 }
 + (void)setCollectorHost:(NSString *)host
 {

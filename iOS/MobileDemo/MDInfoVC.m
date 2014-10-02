@@ -52,7 +52,7 @@ extern NSString *__NRMA__customAppVersionString;
 
     if (self.needsRestart) {
         [[[UIAlertView alloc] initWithTitle:@"Restart!"
-                                   message:@"To ensure these changes take full effect:\nClose the app, force quit it, and re-launch."
+                                   message:@"You've updated your environment.\nClose the app, force quit it, and re-launch."
                                   delegate:nil
                          cancelButtonTitle:@"KTHX"
                          otherButtonTitles:nil] show];
@@ -79,26 +79,27 @@ extern NSString *__NRMA__customAppVersionString;
     [self updateAppInfo];
     self.needsRestart = YES;
 }
-- (IBAction)appTokenChanged:(id)sender
+- (void)appTokenChanged
 {
     NSString *newToken = self.appTokenField.text;
     if (newToken.length == 42 && [newToken hasPrefix:@"AA"]) {
-        [MDSettings setAppToken:newToken];
-        [self updateAppInfo];
-        self.needsRestart = YES;
+        if (! [MDSettings.appToken isEqualToString:newToken])
+        {
+            [MDSettings setAppToken:newToken];
+            [self updateAppInfo];
+            self.needsRestart = YES;
+        }
     }
-}
-- (IBAction)appTokenKeyPress:(id)sender
-{
-    NSLog(@"%@", [sender description]);
 }
 -(IBAction)dismissKeyboard:(id)sender
 {
     [self.view endEditing:YES];
+    [self appTokenChanged];
 }
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.view endEditing:YES];
+    [self appTokenChanged];
 
     return NO;
 }

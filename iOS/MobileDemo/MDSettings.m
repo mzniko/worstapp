@@ -56,6 +56,7 @@
 + (void)setAppVersion:(NSString *)version
 {
     [[NSUserDefaults standardUserDefaults] setValue:version forKey:kCustomAppVersion];
+    [NRMADemoTools setApplicationVersion:version];
 }
 
 

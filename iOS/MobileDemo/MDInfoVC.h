@@ -19,8 +19,6 @@
 - (IBAction)changeVersionTapped:(id)sender;
 - (IBAction)doneTapped:(id)sender;
 - (IBAction)environmentSelectionChanged:(id)sender;
-- (IBAction)appTokenChanged:(id)sender;
-- (IBAction)appTokenKeyPress:(id)sender;
 - (IBAction)dismissKeyboard:(id)sender;
 
 @end
