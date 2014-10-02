@@ -24,6 +24,12 @@
 		3A56475C19DB42800064B898 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56474C19DB42800064B898 /* iTunesArtwork.png */; };
 		3A56475D19DB42800064B898 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56474D19DB42800064B898 /* iTunesArtwork@2x.png */; };
 		3A56476019DB5AA10064B898 /* MDActionTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A56475F19DB5AA10064B898 /* MDActionTableDataSource.m */; };
+		3A56476419DBA06B0064B898 /* MDImageGalleryVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A56476219DBA06B0064B898 /* MDImageGalleryVC.m */; };
+		3A56476819DBA44A0064B898 /* MDImageGalleryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A56476719DBA44A0064B898 /* MDImageGalleryView.xib */; };
+		3A75993A19DC8CA7006DF783 /* MDInfoVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A75993919DC8CA7006DF783 /* MDInfoVC.m */; };
+		3A75993D19DC90D8006DF783 /* MDSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A75993C19DC90D8006DF783 /* MDSettings.m */; };
+		3A75994619DCAE38006DF783 /* 19-gear.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A75994419DCAE38006DF783 /* 19-gear.png */; };
+		3A75994719DCAE38006DF783 /* 19-gear@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A75994519DCAE38006DF783 /* 19-gear@2x.png */; };
 		3A82F14A19CA99A200036226 /* NRMADemoTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A82F14919CA99A200036226 /* NRMADemoTools.m */; };
 		3AA898BB19BA14CE004E0892 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898BA19BA14CE004E0892 /* Foundation.framework */; };
 		3AA898BD19BA14CE004E0892 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898BC19BA14CE004E0892 /* CoreGraphics.framework */; };
@@ -64,6 +70,15 @@
 		3A56474D19DB42800064B898 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		3A56475E19DB5AA10064B898 /* MDActionTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDActionTableDataSource.h; sourceTree = "<group>"; };
 		3A56475F19DB5AA10064B898 /* MDActionTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDActionTableDataSource.m; sourceTree = "<group>"; };
+		3A56476119DBA06B0064B898 /* MDImageGalleryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDImageGalleryVC.h; sourceTree = "<group>"; };
+		3A56476219DBA06B0064B898 /* MDImageGalleryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDImageGalleryVC.m; sourceTree = "<group>"; };
+		3A56476719DBA44A0064B898 /* MDImageGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDImageGalleryView.xib; sourceTree = "<group>"; };
+		3A75993819DC8CA7006DF783 /* MDInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDInfoVC.h; sourceTree = "<group>"; };
+		3A75993919DC8CA7006DF783 /* MDInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDInfoVC.m; sourceTree = "<group>"; };
+		3A75993B19DC90D8006DF783 /* MDSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSettings.h; sourceTree = "<group>"; };
+		3A75993C19DC90D8006DF783 /* MDSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSettings.m; sourceTree = "<group>"; };
+		3A75994419DCAE38006DF783 /* 19-gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear.png"; sourceTree = "<group>"; };
+		3A75994519DCAE38006DF783 /* 19-gear@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "19-gear@2x.png"; sourceTree = "<group>"; };
 		3A82F14819CA99A200036226 /* NRMADemoTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRMADemoTools.h; sourceTree = "<group>"; };
 		3A82F14919CA99A200036226 /* NRMADemoTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRMADemoTools.m; sourceTree = "<group>"; };
 		3AA898B719BA14CE004E0892 /* MobileDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +131,8 @@
 		3A56473D19DB42130064B898 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				3A75994419DCAE38006DF783 /* 19-gear.png */,
+				3A75994519DCAE38006DF783 /* 19-gear@2x.png */,
 				3A56473E19DB42800064B898 /* AppIcon29x29.png */,
 				3A56473F19DB42800064B898 /* AppIcon29x29@2x.png */,
 				3A56474019DB42800064B898 /* AppIcon40x40.png */,
@@ -134,6 +151,16 @@
 				3A56474D19DB42800064B898 /* iTunesArtwork@2x.png */,
 			);
 			name = Assets;
+			sourceTree = "<group>";
+		};
+		3A56476619DBA2E60064B898 /* Performance Demos */ = {
+			isa = PBXGroup;
+			children = (
+				3A56476119DBA06B0064B898 /* MDImageGalleryVC.h */,
+				3A56476219DBA06B0064B898 /* MDImageGalleryVC.m */,
+				3A56476719DBA44A0064B898 /* MDImageGalleryView.xib */,
+			);
+			name = "Performance Demos";
 			sourceTree = "<group>";
 		};
 		3A82F14719CA996E00036226 /* DemoTools */ = {
@@ -182,10 +209,13 @@
 		3AA898C019BA14CE004E0892 /* MobileDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3A56476619DBA2E60064B898 /* Performance Demos */,
 				3A56473D19DB42130064B898 /* Assets */,
 				3A82F14719CA996E00036226 /* DemoTools */,
 				3AA898C919BA14CE004E0892 /* MDAppDelegate.h */,
 				3AA898CA19BA14CE004E0892 /* MDAppDelegate.m */,
+				3A75993B19DC90D8006DF783 /* MDSettings.h */,
+				3A75993C19DC90D8006DF783 /* MDSettings.m */,
 				3AA898CF19BA14CE004E0892 /* MDIntroVC.h */,
 				3AA898D019BA14CE004E0892 /* MDIntroVC.m */,
 				3AA898EF19BA15EE004E0892 /* MDHomeVC.h */,
@@ -199,6 +229,8 @@
 				3AA898C119BA14CE004E0892 /* Supporting Files */,
 				3A56475E19DB5AA10064B898 /* MDActionTableDataSource.h */,
 				3A56475F19DB5AA10064B898 /* MDActionTableDataSource.m */,
+				3A75993819DC8CA7006DF783 /* MDInfoVC.h */,
+				3A75993919DC8CA7006DF783 /* MDInfoVC.m */,
 			);
 			path = MobileDemo;
 			sourceTree = "<group>";
@@ -285,10 +317,13 @@
 				3A56475319DB42800064B898 /* AppIcon50x50@2x.png in Resources */,
 				3AA898CE19BA14CE004E0892 /* Main.storyboard in Resources */,
 				3A56475419DB42800064B898 /* AppIcon57x57.png in Resources */,
+				3A56476819DBA44A0064B898 /* MDImageGalleryView.xib in Resources */,
+				3A75994719DCAE38006DF783 /* 19-gear@2x.png in Resources */,
 				3A56474E19DB42800064B898 /* AppIcon29x29.png in Resources */,
 				3A56475719DB42800064B898 /* AppIcon60x60@2x.png in Resources */,
 				3A56475519DB42800064B898 /* AppIcon57x57@2x.png in Resources */,
 				3A56475D19DB42800064B898 /* iTunesArtwork@2x.png in Resources */,
+				3A75994619DCAE38006DF783 /* 19-gear.png in Resources */,
 				3A56475219DB42800064B898 /* AppIcon50x50.png in Resources */,
 				3A56475819DB42800064B898 /* AppIcon72x72.png in Resources */,
 				3A56475919DB42800064B898 /* AppIcon72x72@2x.png in Resources */,
@@ -351,6 +386,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A56476419DBA06B0064B898 /* MDImageGalleryVC.m in Sources */,
+				3A75993A19DC8CA7006DF783 /* MDInfoVC.m in Sources */,
 				3A82F14A19CA99A200036226 /* NRMADemoTools.m in Sources */,
 				3AA898F919BA1BE8004E0892 /* MDSystemVC.m in Sources */,
 				3AA898FC19BA1BF5004E0892 /* MDPremiseVC.m in Sources */,
@@ -358,6 +395,7 @@
 				3AA898D119BA14CE004E0892 /* MDIntroVC.m in Sources */,
 				3AA898F119BA15EE004E0892 /* MDHomeVC.m in Sources */,
 				3A56476019DB5AA10064B898 /* MDActionTableDataSource.m in Sources */,
+				3A75993D19DC90D8006DF783 /* MDSettings.m in Sources */,
 				3AA898CB19BA14CE004E0892 /* MDAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,7 +508,7 @@
 				GCC_PREFIX_HEADER = "MobileDemo/MobileDemo-Prefix.pch";
 				INFOPLIST_FILE = "MobileDemo/MobileDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bfa29e30-b8d5-4fb3-8322-de723a3ca5f7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -491,7 +529,7 @@
 				GCC_PREFIX_HEADER = "MobileDemo/MobileDemo-Prefix.pch";
 				INFOPLIST_FILE = "MobileDemo/MobileDemo-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "bfa29e30-b8d5-4fb3-8322-de723a3ca5f7";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

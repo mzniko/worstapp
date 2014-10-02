@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="5056" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MDImageGalleryVC">
+            <connections>
+                <outlet property="imageScrollView" destination="oTG-tJ-eEi" id="fbq-Sy-a1u"/>
+                <outlet property="view" destination="iN0-l3-epB" id="3yh-b5-SZH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oTG-tJ-eEi">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-bQ-N9j">
+                            <rect key="frame" x="137" y="485" width="37" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Done">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="doneTapped:" destination="-1" eventType="touchUpInside" id="11E-h4-EEd"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="MDImageGalleryVC" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UkZ-kF-nSi">
+                            <rect key="frame" x="149" y="20" width="151" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="UkZ-kF-nSi" firstAttribute="top" secondItem="oTG-tJ-eEi" secondAttribute="top" constant="20" id="3pF-i1-ffk"/>
+                        <constraint firstAttribute="trailing" secondItem="UkZ-kF-nSi" secondAttribute="trailing" constant="20" id="TdS-kh-I4T"/>
+                        <constraint firstAttribute="bottom" secondItem="bcO-bQ-N9j" secondAttribute="bottom" constant="53" id="VPq-eV-GIx"/>
+                        <constraint firstAttribute="centerX" secondItem="bcO-bQ-N9j" secondAttribute="centerX" id="vMq-VM-abE"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="oTG-tJ-eEi" secondAttribute="trailing" id="FfK-wu-MMC"/>
+                <constraint firstItem="oTG-tJ-eEi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="TcB-oR-S6z"/>
+                <constraint firstAttribute="bottom" secondItem="oTG-tJ-eEi" secondAttribute="bottom" id="XZq-lc-ZQG"/>
+                <constraint firstItem="oTG-tJ-eEi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e6G-gp-YNR"/>
+            </constraints>
+            <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

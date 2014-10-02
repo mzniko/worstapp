@@ -21,9 +21,6 @@ extern NSString *__NRMA__customAppVersionString;
 
 @implementation MDIntroVC
 
-@synthesize actionDataSource;
-@synthesize actionTableView;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -38,8 +35,6 @@ extern NSString *__NRMA__customAppVersionString;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self updateAppInfo];
-
     [self parseDataSymbols];
 }
 
@@ -99,42 +94,6 @@ extern NSString *__NRMA__customAppVersionString;
     [tableView deselectRowAtIndexPath:indexPath animated:(vc != nil)];
 }
 
-
-- (IBAction)changeVersionTapped:(id)sender
-{
-    NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:@"CustomAppVersion"];
-    if (! version) {
-        version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-        if (! [version length]) {
-            version = @"1.0";
-        }
-    }
-
-    NSMutableArray *components = [[version componentsSeparatedByString:@"."] mutableCopy];
-    NSInteger newValue = [[components lastObject] integerValue] + 1;
-    components[components.count-1] = [NSString stringWithFormat:@"%02d", newValue];
-    version = [components componentsJoinedByString:@"."];
-
-    [[NSUserDefaults standardUserDefaults] setValue:version forKey:@"CustomAppVersion"];
-
-    [NRMADemoTools setApplicationVersion:version];
-
-    [NRMADemoTools forceReconnect];
-
-    if ([self isViewLoaded]) {
-        [self updateAppInfo];
-    }
-}
-
-- (void)updateAppInfo
-{
-    self.appInfo.text = [NSString stringWithFormat:@"Version\t%@\nOS\t\t%@\nModel\t%@\nCarrier\t%@\nUDID\t%@",
-                         __NRMA__customAppVersionString,
-                         [NewRelicInternalUtils osVersion],
-                         [NewRelicInternalUtils deviceModel],
-                         [NewRelicInternalUtils carrierName],
-                         [NewRelicInternalUtils deviceId]];
-}
 
 - (IBAction)loginTapped:(id)sender
 {

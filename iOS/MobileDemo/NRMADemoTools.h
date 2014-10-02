@@ -27,10 +27,6 @@ typedef enum {
 + (NSString *)osVersion;
 @end
 
-@interface NRMAAgentConfiguration : NSObject
-+ (void)setApplicationVersion:(NSString *)versionString;
-@end
-
 @interface NRMAHarvester : NSObject
 - (void) clearStoredHarvesterConfiguration;
 - (void) transition:(int)state;
@@ -41,6 +37,19 @@ typedef enum {
 
 + (NRMAHarvestController*) harvestController;
 - (NRMAHarvester *)harvester;
+@end
+
+@interface NRMAAgentConfiguration : NSObject
+@property(nonatomic,strong) NSString* collectorHost;
+@property(nonatomic,strong) NSString* applicationToken;
+
++ (void)setApplicationVersion:(NSString *)versionString;
+@end
+
+@interface NewRelicAgentInternal : NSObject
++ (NewRelicAgentInternal*) sharedInstance;
+- (NRMAAgentConfiguration*) agentConfiguration;
+- (BOOL)enabled;
 @end
 
 void* NRMASwapImplementations(Class c, SEL selector, IMP newImplementation);
@@ -55,6 +64,9 @@ BOOL NRMASwizzleOrAddMethod(id self, SEL origSelector, SEL newSelector, IMP theI
 @interface NRMADemoTools : NSObject
 
 + (void)setApplicationVersion:(NSString *)version;
++ (void)setCollectorHost:(NSString *)host;
++ (void)setApplicationToken:(NSString *)token;
+
 + (IMP)setCarrierName:(NSString *)carrier;
 + (IMP)setNetworkStatus:(NRMANetworkStatus)status;
 + (IMP)setDeviceModel:(NSString *)model;

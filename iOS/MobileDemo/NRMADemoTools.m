@@ -24,6 +24,14 @@ NSString *__NRMA_FAKE_MODEL_imp() {
 {
     [NRMAAgentConfiguration setApplicationVersion:version];
 }
++ (void)setCollectorHost:(NSString *)host
+{
+    [[NewRelicAgentInternal sharedInstance] agentConfiguration].collectorHost = host;
+}
++ (void)setApplicationToken:(NSString *)token
+{
+    [[NewRelicAgentInternal sharedInstance] agentConfiguration].applicationToken = token;
+}
 
 + (IMP)setCarrierName:(NSString *)carrier
 {

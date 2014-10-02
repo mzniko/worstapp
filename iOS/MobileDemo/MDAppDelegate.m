@@ -8,6 +8,7 @@
 
 #import "MDAppDelegate.h"
 #import "NRMADemoTools.h"
+#import "MDSettings.h"
 
 @interface NewRelic (demo)
 + (void)startWithApplicationToken:(NSString*)appToken
@@ -21,17 +22,6 @@
 
 - (void)setupDemoAppState
 {
-    NSString *version = [[NSUserDefaults standardUserDefaults] valueForKey:@"CustomAppVersion"];
-    if (! version) {
-        version = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"];
-        if (! [version length]) {
-            version = @"1.0";
-        }
-        [[NSUserDefaults standardUserDefaults] setValue:version forKey:@"CustomAppVersion"];
-    }
-
-    [NRMADemoTools setApplicationVersion:version];
-
     sranddev();
 
     // random hardware...
@@ -91,13 +81,14 @@
 {
     // Override point for customization after application launch.
     [self setupDemoAppState];
+    [MDSettings applySettings];
 
     [NRLogger setLogLevels:NRLogLevelALL];
 
     // https://staging.newrelic.com/accounts/340262/mobile/64968/
-    [NewRelic startWithApplicationToken:@"AA8af476cb7cab516d0e97bf9b429c51cfce88f672"
-                    andCollectorAddress:@"staging-mobile-collector.newrelic.com"
-               andCrashCollectorAddress:@"staging-mobile-crash.newrelic.com"
+    [NewRelic startWithApplicationToken:[MDSettings appToken]
+                    andCollectorAddress:[MDSettings collectorHostname]
+               andCrashCollectorAddress:[MDSettings crashCollectorHostname]
                                 withSSL:YES];
 
     NSString *interaction = NR_START_NAMED_INTERACTION(@"App Setup");
