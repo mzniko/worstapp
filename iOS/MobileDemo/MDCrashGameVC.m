@@ -12,6 +12,7 @@
     NSInteger lastTappedNumber;
     NSTimeInterval gameStartedAt;
     BOOL running;
+    NSTimeInterval gameSpeed;
 }
 
 @property (strong) NSTimer *timer;
@@ -39,6 +40,7 @@
     running = YES;
     lastTappedNumber = 0;
     gameStartedAt = [NSDate timeIntervalSinceReferenceDate];
+    gameSpeed = 1.0;
 
     for (NSUInteger i=0; i < self.buttonSet.count; i++) {
         ((UIButton *)self.buttonSet[i]).hidden = NO;
@@ -65,14 +67,14 @@
 {
     NSTimeInterval t = [NSDate timeIntervalSinceReferenceDate] - gameStartedAt;
 
-    self.counter.text = [NSString stringWithFormat:@"%d points -- %2.0lf seconds", lastTappedNumber, t];
+    self.counter.text = [NSString stringWithFormat:@"%d points | %2.0lf seconds", lastTappedNumber, t];
 }
 
 - (void)moveButtons
 {
     if (! running) return;
 
-    [UIView animateWithDuration:1.0
+    [UIView animateWithDuration:gameSpeed
                           delay:0
                         options:(UIViewAnimationCurveEaseInOut|UIViewAnimationOptionAllowUserInteraction)
                      animations:^{
@@ -91,15 +93,13 @@
                      }
                      completion:^(BOOL finished){
                          if (running) {
-                             [self performSelector:@selector(moveButtons) withObject:nil afterDelay:1.0];
+                             [self performSelector:@selector(moveButtons) withObject:nil afterDelay:gameSpeed];
                          }
                      }];
 }
 
 - (IBAction)buttonTapped:(id)sender
 {
-    NR_TRACE_METHOD_START(NRTraceTypeLayout);
-
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton *b = sender;
         NSInteger i = [b.titleLabel.text integerValue];
@@ -109,11 +109,9 @@
         }
         else {
             // TODO complain...
-            sleep(1);
+            gameSpeed = gameSpeed * 0.9;
         }
     }
-
-    NR_TRACE_METHOD_STOP;
 }
 
 - (IBAction)doneTapped:(id)sender
