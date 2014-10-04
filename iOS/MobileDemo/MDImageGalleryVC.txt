@@ -1,0 +1,16 @@
+This demo fetches a list of photos from a server, and then fetches each image from the server and puts it on screen.
+
+What's wrong with it?
+1. Blocking the UI thread
+This screen blocks the UI thread while it fetched the list. You'll see that the spinners and scrolling are non-responsive for the first few seconds as the app decides what photos to retrieve.
+
+2. Single-threaded download queue
+The app downloads and displays photos one at a time. If you're on a fast, reliable network connection this won't take long. If you're on a slow cell connection it may feel like a waste of your morning. Either way, even a 3G cell connection can support 3-4 image downloads in parallel for a more engaging experience.
+
+3. Really big images
+The app is downloading megabyte-plus images from the server. There's no need for this, the developer could pull down smaller versions of the images since they're going to be reduced for viewing in thumbnails anyway.
+
+4. Duplicated network requests
+There's a bug in here causing the list to be retrieved twice in parallel.
+
+See if you can find all four of these problems in an Interaction trace named "Display MDImageGalleryVC".

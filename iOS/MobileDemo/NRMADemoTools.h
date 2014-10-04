@@ -52,6 +52,18 @@ typedef enum {
 - (BOOL)enabled;
 @end
 
+@interface NRMATraceMachine : NSObject
++ (BOOL) shouldCollectTraces;
+@end
+
+@interface NRMAActivityTrace : NSObject
+- (BOOL) shouldRecord;
+@end
+
+@interface NRMATraceConfigurations : NSObject
+@property(nonatomic,assign) int maxTotalTraceCount;
+@end
+
 void* NRMASwapImplementations(Class c, SEL selector, IMP newImplementation);
 void NRMASwapOrReplaceClassMethod(Class c, SEL originalSelector, SEL newSelector);
 void* NRMAReplaceInstanceMethod(Class class, SEL selector, IMP newImplementation);
@@ -66,6 +78,8 @@ BOOL NRMASwizzleOrAddMethod(id self, SEL origSelector, SEL newSelector, IMP theI
 + (void)setApplicationVersion:(NSString *)version;
 + (void)setCollectorHost:(NSString *)host;
 + (void)setApplicationToken:(NSString *)token;
+
++ (void)collectAllInteractionTraces;
 
 + (IMP)setCarrierName:(NSString *)carrier;
 + (IMP)setNetworkStatus:(NRMANetworkStatus)status;

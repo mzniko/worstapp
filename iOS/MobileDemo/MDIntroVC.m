@@ -10,10 +10,11 @@
 #import "MDHomeVC.h"
 #import "MBProgressHUD.h"
 #import "NRMADemoTools.h"
-#import "MDActionTableDataSource.h"
+#import "MDDemoListDataSource.h"
+#import "MDPreviewVC.h"
 
 @interface MDIntroVC ()
-@property (strong) MDActionTableDataSource *actionDataSource;
+@property (strong) MDDemoListDataSource *actionDataSource;
 @end
 
 
@@ -25,7 +26,7 @@ extern NSString *__NRMA__customAppVersionString;
 {
     [super viewDidLoad];
     if (! self.actionDataSource) {
-        self.actionDataSource = [[MDActionTableDataSource alloc] init];
+        self.actionDataSource = [[MDDemoListDataSource alloc] init];
     }
 
 	// Do any additional setup after loading the view, typically from a nib.
@@ -75,12 +76,11 @@ extern NSString *__NRMA__customAppVersionString;
 {
     NSString *className = [self.actionDataSource classNameForActionAtIndexPath:indexPath];
 
-    UIViewController *vc = nil;
-
     if (className.length > 0) {
-        vc = [[NSClassFromString(className) alloc] init];
-        if (vc) {
-            [self presentViewController:vc animated:YES completion:nil];
+        if (NSClassFromString(className)) {
+        [self presentViewController:[[MDPreviewVC alloc] initWithTarget:className]
+                           animated:YES
+                         completion:nil];
         }
         else {
             [[[UIAlertView alloc] initWithTitle:@"Coming soon"
@@ -90,8 +90,8 @@ extern NSString *__NRMA__customAppVersionString;
                               otherButtonTitles:nil] show];
         }
     }
-
-    [tableView deselectRowAtIndexPath:indexPath animated:(vc != nil)];
+    
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 

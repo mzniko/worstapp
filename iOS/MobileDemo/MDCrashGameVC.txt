@@ -1,0 +1,17 @@
+This demo is a game.
+
+Chase the numbered buttons around the screen, tapping them in order. 
+
+1...
+
+2...
+
+3...
+
+But there is an error in the code. 
+
+Play the game until it crashes, then re-launch the app to send the crash to New Relic.
+
+1. Seek out the crash report in MDCrashGameVC.m.
+2. What line is the exception on?
+3. Can you tell what button has the fatal flaw by examining the details of crash occurrences?

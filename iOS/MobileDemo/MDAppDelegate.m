@@ -22,6 +22,8 @@
 
 - (void)setupDemoAppState
 {
+    [NRMADemoTools collectAllInteractionTraces];
+    
     sranddev();
 
     // random hardware...

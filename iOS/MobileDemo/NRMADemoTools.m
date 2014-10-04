@@ -37,6 +37,25 @@ extern NSString *__NRMA__customAppVersionString;
     [[NewRelicAgentInternal sharedInstance] agentConfiguration].applicationToken = token;
 }
 
+
++ (void)collectAllInteractionTraces
+{
+    NRMAReplaceClassMethod([NRMATraceMachine class],
+                           @selector(shouldCollectTraces),
+                           imp_implementationWithBlock(^{ return YES; }));
+
+    NRMAReplaceInstanceMethod([NRMAActivityTrace class],
+                              @selector(shouldRecord),
+                              imp_implementationWithBlock(^{ return YES; }));
+
+    NRMAReplaceInstanceMethod([NRMATraceConfigurations class],
+                              @selector(maxTotalTraceCount),
+                              imp_implementationWithBlock(^{ return (int)9999; }));
+}
+
+
+
+
 + (IMP)setCarrierName:(NSString *)carrier
 {
     __block NSString *value = [carrier copy];

@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 newrelic. All rights reserved.
 //
 
-#import "MDActionTableDataSource.h"
+#import "MDDemoListDataSource.h"
 
-@interface MDActionTableDataSource()
+@interface MDDemoListDataSource()
 @property (strong) NSArray *actionItems;
 @end
 
-@implementation MDActionTableDataSource
+@implementation MDDemoListDataSource
 
 @synthesize actionItems;
 
@@ -22,10 +22,8 @@
     if (self)
     {
         self.actionItems = @[@[@"Things to see and do...", @""],
-                             @[@"Image Gallery", @"MDImageGalleryVC"],
-                             @[@"Login Flow", @"MDLoginFlowVC"],
-                             @[@"Table View", @"MDTableViewVC"],
-                             @[@"Share Photos", @"MDSharePhotosVC"]
+                             @[@"Slow Image Gallery", @"MDImageGalleryVC"],
+                             @[@"The Crashing Game", @"MDCrashGameVC"]
                              ];
     }
     return self;
@@ -49,9 +47,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MDActionTableDataSource"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MDDemoListDataSource"];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MDActionTableDataSource"];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"MDDemoListDataSource"];
         cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         cell.backgroundColor = [UIColor clearColor];
     }

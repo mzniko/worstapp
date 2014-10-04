@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MDActionTableDataSource : NSObject <UITableViewDataSource>
+@interface MDDemoListDataSource : NSObject <UITableViewDataSource>
 
 - (NSString *)labelForActionAtIndexPath:(NSIndexPath *)indexPath;
 - (NSString *)classNameForActionAtIndexPath:(NSIndexPath *)indexPath;
