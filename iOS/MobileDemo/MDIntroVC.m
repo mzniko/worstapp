@@ -32,11 +32,12 @@ extern NSString *__NRMA__customAppVersionString;
 	// Do any additional setup after loading the view, typically from a nib.
     self.actionTableView.dataSource = self.actionDataSource;
     self.actionTableView.delegate = self;
+
+    [self parseDataSymbols];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self parseDataSymbols];
 }
 
 - (void)parseDataSymbols

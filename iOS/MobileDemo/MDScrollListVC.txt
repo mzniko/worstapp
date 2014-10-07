@@ -1,0 +1,11 @@
+This demonstrates a scrolling list of things.
+
+The app maintains a list of things in a data file.
+
+Unfortunately, the code that drives this list is poorly designed. It doesn't use a database. It has to read the whole data set to show the first 20 rows.
+
+But that't not all...
+There's a bug. Every time the app fills out the data for one row it re-loads the entire data file. That causes the thread that drives the app's user interface to run expensive code and make the screen stutter.
+
+See if you can find the [MDItemList loadList] and [MDItemList loadItem] methods in Interaction traces for "Display MDScrollListVC".
+

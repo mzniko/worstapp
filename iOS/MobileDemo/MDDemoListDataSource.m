@@ -23,7 +23,8 @@
     {
         self.actionItems = @[@[@"Things to see and do...", @""],
                              @[@"Slow Image Gallery", @"MDImageGalleryVC"],
-                             @[@"The Crashing Game", @"MDCrashGameVC"]
+                             @[@"The Crashing Game", @"MDCrashGameVC"],
+                             @[@"The Stuttery List", @"MDScrollListVC"]
                              ];
     }
     return self;

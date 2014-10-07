@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "MDImageLoader.h"
+
+
 @interface MDImageGalleryVC : UIViewController
-@property (nonatomic, strong) IBOutlet UIScrollView *imageScrollView;
+@property (nonatomic, strong) IBOutletCollection(MDImageLoader) NSArray *imageViews;
 
 - (IBAction)doneTapped:(id)sender;
+
++ (NSURL *)URLForTile:(NSUInteger)index;
+
 @end
