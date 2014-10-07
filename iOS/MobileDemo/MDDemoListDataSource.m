@@ -21,8 +21,7 @@
     self = [super init];
     if (self)
     {
-        self.actionItems = @[@[@"Things to see and do...", @""],
-                             @[@"Slow Image Gallery", @"MDImageGalleryVC"],
+        self.actionItems = @[@[@"The Slowest Image Gallery", @"MDImageGalleryVC"],
                              @[@"The Crashing Game", @"MDCrashGameVC"],
                              @[@"The Stuttery List", @"MDScrollListVC"]
                              ];
@@ -45,6 +44,18 @@
 {
     return self.actionItems.count;
 }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    switch (section) {
+        case 0:
+            return @"Things to see and do...";
+        default:
+            return nil;
+    }
+}
+
+
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -13,6 +13,7 @@
 
 @interface MDImageGalleryVC : UIViewController
 @property (nonatomic, strong) IBOutletCollection(MDImageLoader) NSArray *imageViews;
+@property (nonatomic, strong) IBOutlet UIButton *doneButton;
 
 - (IBAction)doneTapped:(id)sender;
 

@@ -24,4 +24,7 @@
 + (NSString *)appToken;
 + (void)setAppToken:(NSString *)appToken;
 
++ (BOOL)deviceChameleonEnabled;
++ (void)setDeviceChameleonEnabled:(BOOL)enabled;
+
 @end

@@ -11,6 +11,7 @@
 
 
 #define kUseProductionCollector @"MDUseProductionCollector"
+#define kDisableChameleon @"MDDisableChameleon"
 #define kCustomAppVersion @"MDCustomAppVersion"
 #define kAppToken @"MDAppToken"
 #define kDefaultStagingAppToken @"AA8af476cb7cab516d0e97bf9b429c51cfce88f672"
@@ -108,5 +109,20 @@
 {
     [[NSUserDefaults standardUserDefaults] setValue:appToken forKey:kAppToken];
 }
+
++ (BOOL)deviceChameleonEnabled
+{
+    return [[NSUserDefaults standardUserDefaults] valueForKey:kDisableChameleon] == nil;
+}
++ (void)setDeviceChameleonEnabled:(BOOL)enabled
+{
+    if (enabled) {
+        [[NSUserDefaults standardUserDefaults] removeObjectForKey:kDisableChameleon];
+    }
+    else {
+        [[NSUserDefaults standardUserDefaults] setValue:@"yes" forKey:kDisableChameleon];
+    }
+}
+
 
 @end

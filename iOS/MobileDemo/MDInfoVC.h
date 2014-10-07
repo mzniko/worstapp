@@ -14,9 +14,12 @@
 @property (nonatomic, strong) IBOutlet UIControl *backgroundView;
 @property (nonatomic, strong) IBOutlet UISegmentedControl *environmentSelector;
 @property (nonatomic, strong) IBOutlet UITextField *appTokenField;
+@property (nonatomic, strong) IBOutlet UISwitch *chameleonModeSwitch;
+
 @property (assign) BOOL needsRestart;
 
 - (IBAction)changeVersionTapped:(id)sender;
+- (IBAction)enableChameleonTapped:(id)sender;
 - (IBAction)doneTapped:(id)sender;
 - (IBAction)environmentSelectionChanged:(id)sender;
 - (IBAction)dismissKeyboard:(id)sender;

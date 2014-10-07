@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MDImageGalleryVC">
             <connections>
+                <outlet property="doneButton" destination="bcO-bQ-N9j" id="2Bt-cO-Zh6"/>
                 <outlet property="view" destination="iN0-l3-epB" id="3yh-b5-SZH"/>
                 <outletCollection property="imageViews" destination="bAx-G4-5rg" id="v6K-r5-XhC"/>
                 <outletCollection property="imageViews" destination="1iz-fT-QYV" id="9bZ-k7-aGb"/>
@@ -71,7 +72,7 @@
                     <accessibility key="accessibilityConfiguration" label="1"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bcO-bQ-N9j">
-                    <rect key="frame" x="142" y="518" width="37" height="30"/>
+                    <rect key="frame" x="20" y="518" width="37" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <state key="normal" title="Done">
@@ -100,13 +101,13 @@
                 <constraint firstItem="sKn-NA-3cs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="7rD-66-yke"/>
                 <constraint firstItem="Myy-ec-6Dh" firstAttribute="top" secondItem="1iz-fT-QYV" secondAttribute="bottom" constant="10" id="E9A-O5-DcT"/>
                 <constraint firstAttribute="trailing" secondItem="Myy-ec-6Dh" secondAttribute="trailing" constant="14" id="IIw-Ad-bVt"/>
-                <constraint firstAttribute="centerX" secondItem="bcO-bQ-N9j" secondAttribute="centerX" id="LL7-Or-lJR"/>
                 <constraint firstItem="1iz-fT-QYV" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="12" id="Sgj-aH-uIb"/>
                 <constraint firstAttribute="bottom" secondItem="1yH-5j-p1E" secondAttribute="bottom" constant="12" id="UY7-Iu-Q70"/>
                 <constraint firstItem="usL-qB-nwx" firstAttribute="top" secondItem="Myy-ec-6Dh" secondAttribute="bottom" constant="11" id="X7i-7j-ieV"/>
                 <constraint firstItem="bAx-G4-5rg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="Y8O-RE-eWM"/>
                 <constraint firstItem="Zzb-iM-noy" firstAttribute="top" secondItem="bAx-G4-5rg" secondAttribute="bottom" constant="10" id="Zzs-z5-mFr"/>
                 <constraint firstItem="IJu-fg-TLU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="14" id="abs-ID-mkN"/>
+                <constraint firstItem="bcO-bQ-N9j" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="ddi-AK-jxz"/>
                 <constraint firstAttribute="trailing" secondItem="UkZ-kF-nSi" secondAttribute="trailing" constant="20" id="e7G-M7-Xem"/>
                 <constraint firstItem="sKn-NA-3cs" firstAttribute="top" secondItem="IJu-fg-TLU" secondAttribute="bottom" constant="11" id="e80-Ri-F8A"/>
                 <constraint firstItem="UkZ-kF-nSi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="hZP-MT-dDy"/>

@@ -33,6 +33,11 @@ extern NSString *__NRMA__customAppVersionString;
     self.actionTableView.dataSource = self.actionDataSource;
     self.actionTableView.delegate = self;
 
+    self.actionTableView.backgroundView.backgroundColor = [UIColor colorWithWhite:0.7 alpha:0.3];
+    
+    [[UILabel appearanceWhenContainedIn:[UITableViewHeaderFooterView class], nil] setTextColor:[UIColor darkGrayColor]];
+    [[UILabel appearanceWhenContainedIn:[UITableViewHeaderFooterView class], nil] setShadowColor:[UIColor blackColor]];
+
     [self parseDataSymbols];
 }
 

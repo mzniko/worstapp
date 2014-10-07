@@ -91,6 +91,13 @@ extern NSString *__NRMA__customAppVersionString;
         }
     }
 }
+
+- (IBAction)enableChameleonTapped:(id)sender
+{
+    [MDSettings setDeviceChameleonEnabled:self.chameleonModeSwitch.on];
+    self.needsRestart = YES;
+}
+
 -(IBAction)dismissKeyboard:(id)sender
 {
     [self.view endEditing:YES];
@@ -118,6 +125,7 @@ extern NSString *__NRMA__customAppVersionString;
     
     self.appTokenField.text = [MDSettings appToken];
 
+    self.chameleonModeSwitch.on = [MDSettings deviceChameleonEnabled];
 }
 
 

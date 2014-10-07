@@ -29,6 +29,7 @@
 
 - (void) viewDidLoad
 {
+    self.doneButton.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
 }
 
 - (void)viewDidAppear:(BOOL)animated
