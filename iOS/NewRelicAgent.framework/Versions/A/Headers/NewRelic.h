@@ -21,43 +21,42 @@
 #import "NRConstants.h"
 #import "NRTimer.h"
 #import "NRLogger.h"
+#import "NewRelicCustomInteractionInterface.h"
 #import "NRGCDOverride.h"
-
 
 #ifdef __cplusplus
 extern "C" {
 #endif
 
 
-    /*
-     * @protocol NewRelicCustomInteractionInterface
-     *
-     * Discussion:
-     *      Use this protocol with your UIViewControllers to preemptively rename
-     *      the New Relic initiated Interaction Traces by implementing the method
-     *      -customInteractionName.
-     */
-@protocol NewRelicCustomInteractionInterface
-@required
-
-    /*
-     *  - (NSString*) customNewRelicInteractionName;
-     *
-     *  Discussion:
-     *      If you implement this method in your UIViewController, New Relic 
-     *      will call this method before starting an interaction (started from
-     *      -viewDidLoad, or -viewDidAppear:) and rename the interaction with 
-     *      the string returned. (Instead of the default name of
-     *      "display <ViewControllerName>")
-     */
-    - (NSString*)customNewRelicInteractionName;
-@end
 
 @interface NewRelic : NSObject
 
 /**************************************/
 /** Initializing the New Relic agent **/
 /**************************************/
+
+
+
+
+/*!
+ * Throws a demo run-time exception named "NewRelicDemoException" to test 
+ * New Relic Crash Reporting. 
+ *
+ * @param message the message attached to the exception
+ *
+ */
+
++ (void) crashNow:(NSString*)message;
+
+/*!
+ * Throws a demo run-time exception named "NewRelicDemoException" to test 
+ * New Relic Crash Reporting. 
+ *
+ *
+ */
+
++ (void) crashNow;
 
 
 /*!

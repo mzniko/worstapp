@@ -70,10 +70,11 @@ else
     if [ $SERVER_RESPONSE -eq 409 ]; then
         echo "New Relic: dSYM \"${DSYM_UUIDS}\" already uploaded"
     else
-        echo "New Relic: ERROR ${SERVER_RESPONSE} while uploading ${DSYM_ARCHIVE_PATH} to ${DSYM_ARCHIVE_PATH}"
+        echo "New Relic: ERROR \"${SERVER_RESPONSE}\" while uploading \"${DSYM_ARCHIVE_PATH}\" to \"${DSYM_ARCHIVE_PATH}\""
         exit -4
     fi
 fi
 
-/bin/rm -f \"${DSYM_ARCHIVE_PATH}\"
+/bin/rm -f "${DSYM_ARCHIVE_PATH}"
+
 exit 0

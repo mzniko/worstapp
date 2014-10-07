@@ -42,6 +42,8 @@ typedef NSString NRMetricUnit;
 #define kNRAgentHealthPrefix             @"Supportability/AgentHealth"
 #define kNRMASessionStartMetric           @"Session/Start"
 
+#define kNRMAExceptionHandlerHijackedMetric kNRAgentHealthPrefix @"/Hijacked/ExceptionHandler"
+
 #define kNRCarrierNameCacheLifetime     50 // milliseconds
 
 // Network Failure Codes

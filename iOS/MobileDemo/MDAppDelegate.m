@@ -85,7 +85,7 @@
     [self setupDemoAppState];
     [MDSettings applySettings];
 
-    [NRLogger setLogLevels:NRLogLevelALL];
+    [NRLogger setLogLevels:NRLogLevelInfo];
 
     // https://staging.newrelic.com/accounts/340262/mobile/64968/
     [NewRelic startWithApplicationToken:[MDSettings appToken]
