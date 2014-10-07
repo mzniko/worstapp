@@ -7,8 +7,14 @@
 //
 
 #import "MDSystemVC.h"
+#import "MDUIHelpers.h"
 
 @implementation MDSystemVC
+
+- (void)viewDidLoad
+{
+    [MDUIHelpers stylizeButtonsInView:self.view];
+}
 
 
 - (IBAction)doneTapped:(id)sender

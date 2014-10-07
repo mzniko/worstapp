@@ -7,6 +7,7 @@
 //
 
 #import "MDCrashGameVC.h"
+#import "MDUIHelpers.h"
 
 @interface MDCrashGameVC () {
     NSInteger lastTappedNumber;
@@ -33,6 +34,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+
+    [MDUIHelpers stylizeButtonsInView:self.view];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated

@@ -7,8 +7,16 @@
 //
 
 #import "MDPremiseVC.h"
+#import "MDUIHelpers.h"
 
 @implementation MDPremiseVC
+
+
+- (void)viewDidLoad
+{
+    [MDUIHelpers stylizeButtonsInView:self.view];
+}
+
 
 - (IBAction)doneTapped:(id)sender
 {

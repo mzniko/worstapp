@@ -9,6 +9,7 @@
 #import "MDInfoVC.h"
 #import "MDSettings.h"
 #import "NRMADemoTools.h"
+#import "MDUIHelpers.h"
 
 extern NSString *__NRMA__customAppVersionString;
 
@@ -37,7 +38,11 @@ extern NSString *__NRMA__customAppVersionString;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    
     self.appTokenField.delegate = self;
+
+    [MDUIHelpers stylizeButtonsInView:self.view];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated

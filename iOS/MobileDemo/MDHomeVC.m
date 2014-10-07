@@ -7,8 +7,15 @@
 //
 
 #import "MDHomeVC.h"
+#import "MDUIHelpers.h"
 
 @implementation MDHomeVC
+
+
+- (void)viewDidLoad
+{
+    [MDUIHelpers stylizeButtonsInView:self.view];
+}
 
 - (void)viewDidAppear:(BOOL)animated
 {

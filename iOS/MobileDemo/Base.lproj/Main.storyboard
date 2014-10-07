@@ -36,9 +36,13 @@
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V3q-o0-FAX">
-                                <rect key="frame" x="20" y="33" width="38" height="30"/>
+                                <rect key="frame" x="20" y="33" width="50" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="login"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="BBZ-7V-C4w"/>
+                                    <constraint firstAttribute="width" constant="50" id="xDU-rb-vPa"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -48,10 +52,14 @@
                                     <action selector="loginTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JIV-r3-Llg"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziS-8a-JRB">
-                                <rect key="frame" x="260" y="508" width="40" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ziS-8a-JRB">
+                                <rect key="frame" x="260" y="508" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="settings"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eZ8-4N-jsK"/>
+                                    <constraint firstAttribute="width" constant="60" id="llK-1L-RyB"/>
+                                </constraints>
                                 <state key="normal" image="19-gear.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -71,10 +79,8 @@
                             <constraint firstAttribute="trailing" secondItem="veR-IP-cAn" secondAttribute="trailing" id="YD5-II-ZQp"/>
                             <constraint firstItem="veR-IP-cAn" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Z0Z-C8-56v"/>
                             <constraint firstItem="HTO-wQ-7Dg" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="cCh-ct-Wgo"/>
-                            <constraint firstAttribute="trailing" secondItem="ziS-8a-JRB" secondAttribute="trailing" constant="20" id="fPs-gO-0qr"/>
                             <constraint firstAttribute="trailing" secondItem="N4R-Fi-6Dj" secondAttribute="trailing" id="flk-0w-4Db"/>
                             <constraint firstItem="N4R-Fi-6Dj" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="j29-6l-j1k"/>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="ziS-8a-JRB" secondAttribute="bottom" constant="20" id="mAF-HM-RHp"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="320" height="568"/>
@@ -105,9 +111,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="34g-Pz-CUw">
-                                <rect key="frame" x="20" y="518" width="37" height="30"/>
+                                <rect key="frame" x="20" y="498" width="125" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="F8U-0R-Cuw"/>
+                                    <constraint firstAttribute="width" constant="125" id="Fix-EU-dWC"/>
+                                </constraints>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Done">
@@ -193,10 +203,14 @@
                                             <action selector="enableChameleonTapped:" destination="wpl-vP-dPe" eventType="valueChanged" id="atb-T0-E4j"/>
                                         </connections>
                                     </switch>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ui-lx-IAC">
-                                        <rect key="frame" x="20" y="128" width="108" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ui-lx-IAC">
+                                        <rect key="frame" x="20" y="128" width="143" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <accessibility key="accessibilityConfiguration" label="change version"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="143" id="3Xg-1F-BbQ"/>
+                                            <constraint firstAttribute="height" constant="30" id="Gfy-CM-aj2"/>
+                                        </constraints>
                                         <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                         <state key="normal" title="Change Version">
                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -267,9 +281,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SLY-SF-e2F">
-                                <rect key="frame" x="45" y="269" width="52" height="30"/>
+                                <rect key="frame" x="20" y="249" width="125" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="system"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jOc-gQ-RXt"/>
+                                    <constraint firstAttribute="width" constant="125" id="rSP-xp-kHM"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="System">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -280,9 +298,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8j7-xW-9SP">
-                                <rect key="frame" x="223" y="269" width="56" height="30"/>
+                                <rect key="frame" x="175" y="249" width="125" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="premise"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Bg-Em-LJs"/>
+                                    <constraint firstAttribute="width" constant="125" id="vq1-C6-QbS"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Premise">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -293,9 +315,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gM8-8f-kDq">
-                                <rect key="frame" x="20" y="518" width="37" height="30"/>
+                                <rect key="frame" x="20" y="498" width="125" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="b55-WT-64R"/>
+                                    <constraint firstAttribute="height" constant="50" id="fks-JN-biz"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -309,6 +335,10 @@
                                 <rect key="frame" x="51" y="105" width="219" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="this will crash"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="H3M-Ad-FrF"/>
+                                    <constraint firstAttribute="width" constant="125" id="KHy-o6-lie"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="This will crash">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -323,9 +353,9 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="DPK-O5-lxv" secondAttribute="trailing" id="0xB-fs-AAR"/>
                             <constraint firstItem="ZMc-oa-6OQ" firstAttribute="top" secondItem="gM8-8f-kDq" secondAttribute="bottom" constant="20" id="3A9-9s-t95"/>
-                            <constraint firstAttribute="trailing" secondItem="8j7-xW-9SP" secondAttribute="trailing" constant="45" id="4m6-an-TWC"/>
+                            <constraint firstAttribute="trailing" secondItem="8j7-xW-9SP" secondAttribute="trailing" constant="20" id="4m6-an-TWC"/>
                             <constraint firstItem="DPK-O5-lxv" firstAttribute="leading" secondItem="Cju-As-aaC" secondAttribute="leading" id="Eaj-XX-qjl"/>
-                            <constraint firstItem="SLY-SF-e2F" firstAttribute="leading" secondItem="Cju-As-aaC" secondAttribute="leading" constant="45" id="F8N-Jt-csk"/>
+                            <constraint firstItem="SLY-SF-e2F" firstAttribute="leading" secondItem="Cju-As-aaC" secondAttribute="leading" constant="20" id="F8N-Jt-csk"/>
                             <constraint firstItem="ZMc-oa-6OQ" firstAttribute="top" secondItem="DPK-O5-lxv" secondAttribute="bottom" id="FIB-Uo-hX9"/>
                             <constraint firstAttribute="trailing" secondItem="B26-H7-e8U" secondAttribute="trailing" constant="20" id="HrJ-rv-4xp"/>
                             <constraint firstAttribute="centerX" secondItem="XO1-J9-bx9" secondAttribute="centerX" id="VHN-ez-KBQ"/>
@@ -366,9 +396,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7dn-Bf-nU3">
-                                <rect key="frame" x="20" y="518" width="37" height="30"/>
+                                <rect key="frame" x="20" y="498" width="125" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4bF-Q2-FvG"/>
+                                    <constraint firstAttribute="width" constant="125" id="Px6-IU-a8y"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -444,9 +478,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rvh-7z-35Q">
-                                <rect key="frame" x="20" y="518" width="37" height="30"/>
+                                <rect key="frame" x="20" y="498" width="125" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" label="done"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="5Re-W6-TSe"/>
+                                    <constraint firstAttribute="width" constant="125" id="VNX-2E-d8h"/>
+                                </constraints>
                                 <size key="titleShadowOffset" width="0.5" height="0.5"/>
                                 <state key="normal" title="Done">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>

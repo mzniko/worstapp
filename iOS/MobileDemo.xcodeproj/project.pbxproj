@@ -14,6 +14,7 @@
 		3A11392919E378C600C64138 /* MDScrollListVC.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A11392819E378C600C64138 /* MDScrollListVC.txt */; };
 		3A11392C19E3810C00C64138 /* MDWordList.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A11392B19E3810C00C64138 /* MDWordList.m */; };
 		3A11392E19E3AF8900C64138 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A11392D19E3AF8900C64138 /* words.txt */; };
+		3A11393519E457A900C64138 /* MDUIHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A11393419E457A900C64138 /* MDUIHelpers.m */; };
 		3A56474E19DB42800064B898 /* AppIcon29x29.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56473E19DB42800064B898 /* AppIcon29x29.png */; };
 		3A56474F19DB42800064B898 /* AppIcon29x29@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56473F19DB42800064B898 /* AppIcon29x29@2x.png */; };
 		3A56475019DB42800064B898 /* AppIcon40x40.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A56474019DB42800064B898 /* AppIcon40x40.png */; };
@@ -76,6 +77,8 @@
 		3A11392A19E3810C00C64138 /* MDWordList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDWordList.h; sourceTree = "<group>"; };
 		3A11392B19E3810C00C64138 /* MDWordList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDWordList.m; sourceTree = "<group>"; };
 		3A11392D19E3AF8900C64138 /* words.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
+		3A11393319E457A900C64138 /* MDUIHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDUIHelpers.h; sourceTree = "<group>"; };
+		3A11393419E457A900C64138 /* MDUIHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDUIHelpers.m; sourceTree = "<group>"; };
 		3A56473E19DB42800064B898 /* AppIcon29x29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon29x29.png; sourceTree = "<group>"; };
 		3A56473F19DB42800064B898 /* AppIcon29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AppIcon29x29@2x.png"; sourceTree = "<group>"; };
 		3A56474019DB42800064B898 /* AppIcon40x40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AppIcon40x40.png; sourceTree = "<group>"; };
@@ -292,6 +295,8 @@
 				3A82F14719CA996E00036226 /* DemoTools */,
 				3AA898C919BA14CE004E0892 /* MDAppDelegate.h */,
 				3AA898CA19BA14CE004E0892 /* MDAppDelegate.m */,
+				3A11393319E457A900C64138 /* MDUIHelpers.h */,
+				3A11393419E457A900C64138 /* MDUIHelpers.m */,
 				3A75993B19DC90D8006DF783 /* MDSettings.h */,
 				3A75993C19DC90D8006DF783 /* MDSettings.m */,
 				3A75993819DC8CA7006DF783 /* MDInfoVC.h */,
@@ -473,6 +478,7 @@
 			files = (
 				3AB3C67E19DFC521004335F9 /* MDPreviewVC.m in Sources */,
 				3A56476419DBA06B0064B898 /* MDImageGalleryVC.m in Sources */,
+				3A11393519E457A900C64138 /* MDUIHelpers.m in Sources */,
 				3A75993A19DC8CA7006DF783 /* MDInfoVC.m in Sources */,
 				3A11392C19E3810C00C64138 /* MDWordList.m in Sources */,
 				3A82F14A19CA99A200036226 /* NRMADemoTools.m in Sources */,

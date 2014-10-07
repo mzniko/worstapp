@@ -12,6 +12,7 @@
 #import "NRMADemoTools.h"
 #import "MDDemoListDataSource.h"
 #import "MDPreviewVC.h"
+#import "MDUIHelpers.h"
 
 @interface MDIntroVC ()
 @property (strong) MDDemoListDataSource *actionDataSource;
@@ -39,6 +40,9 @@ extern NSString *__NRMA__customAppVersionString;
     [[UILabel appearanceWhenContainedIn:[UITableViewHeaderFooterView class], nil] setShadowColor:[UIColor blackColor]];
 
     [self parseDataSymbols];
+
+    [MDUIHelpers stylizeButtonsInView:self.view];
+
 }
 
 - (void)viewWillAppear:(BOOL)animated

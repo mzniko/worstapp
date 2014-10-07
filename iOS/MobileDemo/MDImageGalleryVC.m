@@ -7,6 +7,7 @@
 //
 
 #import "MDImageGalleryVC.h"
+#import "MDUIHelpers.h"
 
 @interface MDImageGalleryVC ()
 
@@ -29,7 +30,8 @@
 
 - (void) viewDidLoad
 {
-    self.doneButton.backgroundColor = [UIColor colorWithWhite:0.5 alpha:0.5];
+    [MDUIHelpers stylizeButtonsInView:self.view];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated

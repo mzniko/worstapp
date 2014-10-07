@@ -7,6 +7,7 @@
 //
 
 #import "MDPreviewVC.h"
+#import "MDUIHelpers.h"
 
 @interface MDPreviewVC ()
 
@@ -48,6 +49,8 @@
     }
 
     self.contentView.text = content;
+
+    [MDUIHelpers stylizeButtonsInView:self.view];
 }
 
 - (void)didReceiveMemoryWarning

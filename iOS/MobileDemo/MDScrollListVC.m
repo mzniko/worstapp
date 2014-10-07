@@ -8,6 +8,7 @@
 
 #import "MDScrollListVC.h"
 #import "MDWordList.h"
+#import "MDUIHelpers.h"
 
 @interface MDScrollListVC ()
 @property (strong) MDScrollListDataSource *source;
@@ -30,6 +31,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.tableView.dataSource = self.source;
+
+    [MDUIHelpers stylizeButtonsInView:self.view];
+
 }
 
 - (void)didReceiveMemoryWarning

@@ -21,12 +21,17 @@
                     <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q2P-UE-f5m">
-                    <rect key="frame" x="20" y="518" width="37" height="30"/>
+                    <rect key="frame" x="20" y="498" width="125" height="50"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <accessibility key="accessibilityConfiguration" label="done"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="ifF-5v-Cx3"/>
+                        <constraint firstAttribute="height" constant="50" id="mBo-Ea-N8e"/>
+                    </constraints>
                     <size key="titleShadowOffset" width="0.5" height="0.5"/>
                     <state key="normal" title="Done">
-                        <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <color key="titleShadowColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
                         <action selector="doneTapped:" destination="-1" eventType="touchUpInside" id="uAD-KG-NfW"/>
