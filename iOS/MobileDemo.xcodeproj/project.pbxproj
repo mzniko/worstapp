@@ -66,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		098E68D8F0EA772C9124BBAE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		303703CBBAEA4657A37F689D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A11391B19DFDA6000C64138 /* MDCrashGameVC.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = MDCrashGameVC.txt; sourceTree = "<group>"; };
 		3A11391D19E2EBC600C64138 /* MDImageLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDImageLoader.h; sourceTree = "<group>"; };
@@ -142,7 +143,8 @@
 		3AB3C68819DFD13B004335F9 /* MDCrashGameVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDCrashGameVC.xib; sourceTree = "<group>"; };
 		3AB3C68B19DFD392004335F9 /* gamebutton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gamebutton.png; sourceTree = "<group>"; };
 		3AB3C68C19DFD392004335F9 /* gamebutton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "gamebutton@2x.png"; sourceTree = "<group>"; };
-		50967E8D325B4819854DAF5E /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		3AB6E8DF1A2518E500517241 /* NewRelic+Development.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NewRelic+Development.h"; sourceTree = "<group>"; };
+		D6E6F3A0923EB4A31CBCE3BA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -259,7 +261,7 @@
 				3AA898C019BA14CE004E0892 /* MobileDemo */,
 				3AA898B919BA14CE004E0892 /* Frameworks */,
 				3AA898B819BA14CE004E0892 /* Products */,
-				50967E8D325B4819854DAF5E /* Pods.xcconfig */,
+				79378EBFE086F54B9CACBD51 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -290,6 +292,7 @@
 		3AA898C019BA14CE004E0892 /* MobileDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3AB6E8DF1A2518E500517241 /* NewRelic+Development.h */,
 				3A56476619DBA2E60064B898 /* Performance Demos */,
 				3A56473D19DB42130064B898 /* Assets */,
 				3A82F14719CA996E00036226 /* DemoTools */,
@@ -325,6 +328,15 @@
 				3AA898C819BA14CE004E0892 /* MobileDemo-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		79378EBFE086F54B9CACBD51 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				098E68D8F0EA772C9124BBAE /* Pods.debug.xcconfig */,
+				D6E6F3A0923EB4A31CBCE3BA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -437,7 +449,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3A51431B0DC540FF9D15A476 /* Check Pods Manifest.lock */ = {
@@ -590,7 +602,7 @@
 		};
 		3AA898EA19BA14CE004E0892 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50967E8D325B4819854DAF5E /* Pods.xcconfig */;
+			baseConfigurationReference = 098E68D8F0EA772C9124BBAE /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -611,7 +623,7 @@
 		};
 		3AA898EB19BA14CE004E0892 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 50967E8D325B4819854DAF5E /* Pods.xcconfig */;
+			baseConfigurationReference = D6E6F3A0923EB4A31CBCE3BA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;

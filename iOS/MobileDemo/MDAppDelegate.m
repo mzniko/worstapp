@@ -9,14 +9,7 @@
 #import "MDAppDelegate.h"
 #import "NRMADemoTools.h"
 #import "MDSettings.h"
-
-@interface NewRelic (demo)
-+ (void)startWithApplicationToken:(NSString*)appToken
-              andCollectorAddress:(NSString*)url
-         andCrashCollectorAddress:(NSString *)crashCollectorUrl
-                          withSSL:(BOOL)useSSL;
-
-@end
+#import "NewRelic+Development.h"
 
 @implementation MDAppDelegate
 
