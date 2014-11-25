@@ -5,7 +5,7 @@
 //    https://docs.newrelic.com/docs/mobile-apps for information
 //    https://docs.newrelic.com/docs/releases/ios for release notes
 //
-//  Copyright (c) 2013 New Relic. All rights reserved.
+//  Copyright (c) 2014 New Relic. All rights reserved.
 //  See https://docs.newrelic.com/docs/licenses/ios-agent-licenses for license details
 //
 
@@ -46,6 +46,25 @@ typedef NSString NRMetricUnit;
 
 #define kNRCarrierNameCacheLifetime     50 // milliseconds
 
+    
+/******************************************/
+/**      Custom Events & Attributes      **/
+/******************************************/
+#define kNRAnalyticsPurchaseEvent    @"MobilePurchase"
+#define kNRAnalyticsReservedEventNames @[@"MobileSession", @"MobileInteraction", @"MobileHttpRequest", @"MobileCrash", @"PageView", @"Transaction"]
+
+
+#define kNRAnalyticsUsernameAttribute  @"username"
+#define kNRAnalyticsUserEmailAttribute @"email"
+#define kNRAnalyticsUserIdAttribute    @"userId"
+#define kNRAnalyticsCampaignAttribute  @"campaign"
+#define kNRAnalyticsRevenueAttribute   @"revenue"
+#define kNRAnalyticsSkuAttribute       @"sku"
+#define kNRAnalyticsQuantityAttribute  @"quantity"
+    
+    
+    
+    
 // Network Failure Codes
 enum NRNetworkFailureCode {
         NRURLErrorUnknown = -1,

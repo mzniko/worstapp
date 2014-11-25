@@ -81,12 +81,18 @@
     [MDSettings applySettings];
 
     [NRLogger setLogLevels:NRLogLevelInfo];
-
+    
     // https://staging.newrelic.com/accounts/340262/mobile/64968/
     [NewRelic startWithApplicationToken:[MDSettings appToken]
                     andCollectorAddress:[MDSettings collectorHostname]
                andCrashCollectorAddress:[MDSettings crashCollectorHostname]
                                 withSSL:YES];
+    // https://staging-insights.newrelic.com/accounts/340262/explorer/Mobile
+    [NewRelic startAnalyticsReportingWithInsertKey:[MDSettings insightsInsertKey]
+                              andCollectorHostname:[MDSettings insightsCollectorHostname]
+                                      andAccountId:[MDSettings insightsAccountId]];
+    
+
 
     NSString *interaction = NR_START_NAMED_INTERACTION(@"App Setup");
 
