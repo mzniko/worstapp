@@ -93,6 +93,8 @@
                                       andAccountId:[MDSettings insightsAccountId]];
     
 
+    [NewRelic setUsername:[[UIDevice currentDevice] name]];
+    [NewRelic setAttribute:@"appName" value:@"Mobile Demo"];
 
     NSString *interaction = NR_START_NAMED_INTERACTION(@"App Setup");
 
