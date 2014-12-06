@@ -71,7 +71,7 @@
 {
     NSTimeInterval t = [NSDate timeIntervalSinceReferenceDate] - gameStartedAt;
 
-    self.counter.text = [NSString stringWithFormat:@"%d points | %2.0lf seconds", lastTappedNumber, t];
+    self.counter.text = [NSString stringWithFormat:@"%d points | %2.0lf seconds", (int)lastTappedNumber, t];
 }
 
 - (void)moveButtons
@@ -133,7 +133,7 @@
     lastTappedNumber = i;
 
     if (i == 8) {
-        [[NSException exceptionWithName:@"IllegalArgumentException" reason:[NSString stringWithFormat:@"Resource not found loading audio for buttonCode %d", i] userInfo:nil] raise];
+        [[NSException exceptionWithName:@"IllegalArgumentException" reason:[NSString stringWithFormat:@"Resource not found loading audio for buttonCode %d", (int)i] userInfo:nil] raise];
     }
 }
 
