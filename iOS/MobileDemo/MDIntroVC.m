@@ -13,6 +13,7 @@
 #import "MDDemoListDataSource.h"
 #import "MDPreviewVC.h"
 #import "MDUIHelpers.h"
+#import "MDSettings.h"
 
 @interface MDIntroVC ()
 @property (strong) MDDemoListDataSource *actionDataSource;
@@ -120,7 +121,7 @@ extern NSString *__NRMA__customAppVersionString;
                                 hud.progress = i;
                             });
 
-                            [self loginUpdate:(i >= 0.1 && i < 0.11) || (i >= 0.5 && i < 0.53)];
+                            [self loginUpdate:i];
                         }
 
 
@@ -141,16 +142,78 @@ extern NSString *__NRMA__customAppVersionString;
     [self presentViewController:newVC animated:YES completion:nil];
 }
 
-- (void)loginUpdate:(BOOL)doCall
+- (void)loginUpdate:(float)progress
 {
+    static NSString *appDataHeaderKey = @"X-NewRelic-App-Data";
+    static NSString *CATHeader = nil;
+    static NRTimer *reqTimer = nil;
+    
+    NSURL *loginUrl = [NSURL URLWithString:@"https://staging-api.newrelic.com/api/ios/v1/accounts/default.json"];
+    
     NR_TRACE_METHOD_START(NRTraceTypeDatabase);
 
-    if (doCall) {
-        NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:@"https://login.newrelic.com/login"]];
+    // Api::Ios::V1::ApplicationsController#summary
+    if (progress >= 0.1 && progress < 0.11) {
+        NSURLRequest *request = [NSURLRequest requestWithURL:loginUrl];
+        reqTimer = [[NRTimer alloc] init];
         [NSURLConnection sendAsynchronousRequest:request
                                            queue:[NSOperationQueue mainQueue]
                                completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                                   if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+                                       NSHTTPURLResponse * hr = (NSHTTPURLResponse *)response;
+                                       CATHeader = hr.allHeaderFields[appDataHeaderKey];
+                                   }
                                }];
+    }
+    if (progress >= 0.8 && progress < 0.83) {
+        [reqTimer stopTimer];
+        NSInteger statusCode = 200;
+        NSString *responseBody = @"{................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................}";
+        switch (rand()%15) {
+            case 0: statusCode = 401;
+                responseBody = [NSString stringWithFormat:@"{error: 'authentication for %@ failed due to bad credentials'}", [MDSettings email]];
+                break;
+            case 1: statusCode = 403;
+                responseBody = [NSString stringWithFormat:@"{error: 'access to account default deined for user %@'}", [MDSettings userId]];
+                break;
+            case 2: statusCode = 404;
+                responseBody = [NSString stringWithFormat:@"{error: 'resource not found'}"];
+                break;
+            case 3: statusCode = 501;
+                responseBody = [NSString stringWithFormat:@"{error: 'unable to process entity request for account default'}"];
+                break;
+            case 4: statusCode = 503;
+                responseBody = [NSString stringWithFormat:@"{error: 'account default service unavailable'}"];
+                break;
+            case 5:
+                statusCode = 0;
+                [NewRelic noticeNetworkFailureForURL:loginUrl
+                                          httpMethod:@"GET"
+                                           withTimer:reqTimer
+                                      andFailureCode:NSURLErrorDNSLookupFailed];
+                break;
+            case 6:
+                statusCode = 0;
+                [NewRelic noticeNetworkFailureForURL:loginUrl
+                                          httpMethod:@"GET"
+                                           withTimer:reqTimer
+                                      andFailureCode:NSURLErrorServerCertificateHasUnknownRoot];
+                break;
+        }
+        
+        if (statusCode > 0) {
+            NSData *respData = [responseBody dataUsingEncoding:NSUTF8StringEncoding];
+            
+            [NewRelic noticeNetworkRequestForURL:loginUrl
+                                      httpMethod:@"GET"
+                                       withTimer:reqTimer
+                                 responseHeaders:(CATHeader) ? @{appDataHeaderKey: CATHeader} : @{}
+                                      statusCode:statusCode
+                                       bytesSent:0
+                                   bytesReceived:respData.length
+                                    responseData:respData
+                                       andParams:nil];
+        }
     }
 
     [NSThread sleepForTimeInterval:0.05];
