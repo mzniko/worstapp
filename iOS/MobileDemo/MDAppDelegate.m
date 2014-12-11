@@ -67,10 +67,14 @@
         }
 
 
-        // random uuid
-        CFUUIDRef uuid = CFUUIDCreate(kCFAllocatorDefault);
-        [NRMADemoTools setDeviceId:(NSString*)CFBridgingRelease(CFUUIDCreateString(kCFAllocatorDefault, uuid))];
-        CFRelease(uuid);
+        // pick a random user for each app session
+        [MDSettings initUserInfo];
+        
+        [NRMADemoTools setDeviceId:[MDSettings deviceUdid]];
+
+        [NewRelic setUsername:[MDSettings username]];
+        [NewRelic setUserId:[MDSettings userId]];
+        [NewRelic setUserEmail:[MDSettings email]];
     }
 }
 
@@ -93,7 +97,6 @@
                                       andAccountId:[MDSettings insightsAccountId]];
     
 
-    [NewRelic setUsername:[[UIDevice currentDevice] name]];
     [NewRelic setAttribute:@"appName" value:@"Mobile Demo"];
 
     NSString *interaction = NR_START_NAMED_INTERACTION(@"App Setup");

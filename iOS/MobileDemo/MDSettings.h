@@ -31,4 +31,11 @@
 + (BOOL)deviceChameleonEnabled;
 + (void)setDeviceChameleonEnabled:(BOOL)enabled;
 
++ (void)initUserInfo;
+
++ (NSString *)deviceUdid;
++ (NSString *)username;
++ (NSString *)email;
++ (NSString *)userId;
+
 @end
