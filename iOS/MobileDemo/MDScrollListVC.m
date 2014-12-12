@@ -9,6 +9,7 @@
 #import "MDScrollListVC.h"
 #import "MDWordList.h"
 #import "MDUIHelpers.h"
+#import "NewRelic+Development.h"
 
 @interface MDScrollListVC ()
 @property (strong) MDScrollListDataSource *source;
@@ -29,7 +30,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    [NewRelic recordEvent:@"DemoView" withAttributes:@{@"name": @"Scrolling Dictionary"}];
+
     self.tableView.dataSource = self.source;
 
     [MDUIHelpers stylizeButtonsInView:self.view];

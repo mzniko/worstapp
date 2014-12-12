@@ -8,6 +8,7 @@
 
 #import "MDCrashGameVC.h"
 #import "MDUIHelpers.h"
+#import "NewRelic+Development.h"
 
 @interface MDCrashGameVC () {
     NSInteger lastTappedNumber;
@@ -33,6 +34,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+
+    [NewRelic recordEvent:@"DemoView" withAttributes:@{@"name": @"Crashing Game"}];
+
     // Do any additional setup after loading the view from its nib.
 
     [MDUIHelpers stylizeButtonsInView:self.view];

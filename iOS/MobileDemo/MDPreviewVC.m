@@ -8,6 +8,7 @@
 
 #import "MDPreviewVC.h"
 #import "MDUIHelpers.h"
+#import "NewRelic+Development.h"
 
 @interface MDPreviewVC ()
 
@@ -36,7 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+
+    [NewRelic recordEvent:@"DemoPreview" withAttributes:@{@"demoName": self.targetName}];
 
     NSString *filename = [[NSBundle mainBundle] pathForResource:self.targetName ofType:@"txt"];
 

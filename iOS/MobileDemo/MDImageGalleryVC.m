@@ -8,6 +8,7 @@
 
 #import "MDImageGalleryVC.h"
 #import "MDUIHelpers.h"
+#import "NewRelic+Development.h"
 
 @interface MDImageGalleryVC ()
 
@@ -30,6 +31,8 @@
 
 - (void) viewDidLoad
 {
+    [NewRelic recordEvent:@"DemoView" withAttributes:@{@"name": @"Image Gallery"}];
+
     [MDUIHelpers stylizeButtonsInView:self.view];
 
 }
