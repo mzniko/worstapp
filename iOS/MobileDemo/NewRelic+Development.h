@@ -22,40 +22,6 @@
 + (BOOL) harvestNow;
 
 
-+ (void)startAnalyticsReportingWithInsertKey:(NSString *)insertKey
-                        andCollectorHostname:(NSString *)insightsCollectorHostname
-                                andAccountId:(NSInteger)accountId;
-
-
-/*********************************/
-/**      Custom Attributes      **/
-/*********************************/
-
-#pragma mark - figure out a better name that describes what sort of attribute this is?
-+ (BOOL)setAttribute:(NSString *)name value:(NSObject *)value;
-+ (BOOL)setAttribute:(NSString *)name value:(NSObject *)value persistent:(BOOL)retainAcrossSessions;
-
-+ (BOOL)incrementAttribute:(NSString *)name value:(NSNumber *)value;
-+ (BOOL)incrementAttribute:(NSString *)name value:(NSNumber *)value persistent:(BOOL)retainAcrossSessions;
-
-+ (BOOL)removeAttribute:(NSString *)name;
-
-/*************************************/
-/**      Well Known Attributes      **/
-/*************************************/
-+ (BOOL)setUsername:(NSString *)name;
-+ (BOOL)setUserEmail:(NSString *)email;
-+ (BOOL)setUserId:(NSString *)identifier;
-+ (BOOL)setCampaignIdentifier:(NSString *)campaignId;
-+ (BOOL)recordPurchase:(NSString *)sku quantity:(NSNumber *)quantity totalPrice:(NSNumber *)revenue;
-
-
-/*********************************/
-/**      Analytics Events       **/
-/*********************************/
-
-+ (BOOL)recordEvent:(NSString *)name
-     withAttributes:(NSDictionary *)attributes;
 
 
 

@@ -21,10 +21,6 @@
 + (BOOL)useProductionCollector;
 + (void)setUseProductionCollector:(BOOL)production;
 
-+ (NSString *)insightsInsertKey;
-+ (NSString *) insightsCollectorHostname;
-+ (NSInteger) insightsAccountId;
-
 + (NSString *)appToken;
 + (void)setAppToken:(NSString *)appToken;
 

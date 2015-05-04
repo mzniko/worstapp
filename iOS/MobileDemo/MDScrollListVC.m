@@ -31,7 +31,7 @@
 {
     [super viewDidLoad];
     
-    [NewRelic recordEvent:@"DemoView" withAttributes:@{@"name": @"Scrolling Dictionary"}];
+    [NewRelic recordEvent:@"DemoView" attributes:@{@"name": @"Scrolling Dictionary"}];
 
     self.tableView.dataSource = self.source;
 

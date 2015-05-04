@@ -49,7 +49,6 @@
 		3AA898D119BA14CE004E0892 /* MDIntroVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898D019BA14CE004E0892 /* MDIntroVC.m */; };
 		3AA898D319BA14CE004E0892 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AA898D219BA14CE004E0892 /* Images.xcassets */; };
 		3AA898F119BA15EE004E0892 /* MDHomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898F019BA15EE004E0892 /* MDHomeVC.m */; };
-		3AA898F319BA16DD004E0892 /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898F219BA16DD004E0892 /* NewRelicAgent.framework */; };
 		3AA898F919BA1BE8004E0892 /* MDSystemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898F819BA1BE8004E0892 /* MDSystemVC.m */; };
 		3AA898FC19BA1BF5004E0892 /* MDPremiseVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3AA898FB19BA1BF5004E0892 /* MDPremiseVC.m */; };
 		3AA898FE19BA1C71004E0892 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AA898FD19BA1C71004E0892 /* SystemConfiguration.framework */; };
@@ -101,6 +100,8 @@
 		3A56476119DBA06B0064B898 /* MDImageGalleryVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDImageGalleryVC.h; sourceTree = "<group>"; };
 		3A56476219DBA06B0064B898 /* MDImageGalleryVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDImageGalleryVC.m; sourceTree = "<group>"; };
 		3A56476719DBA44A0064B898 /* MDImageGalleryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDImageGalleryView.xib; sourceTree = "<group>"; };
+		3A68AC251AA3CB3F00D38BAE /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		3A68AC271AA3CB4700D38BAE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		3A75993819DC8CA7006DF783 /* MDInfoVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDInfoVC.h; sourceTree = "<group>"; };
 		3A75993919DC8CA7006DF783 /* MDInfoVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDInfoVC.m; sourceTree = "<group>"; };
 		3A75993B19DC90D8006DF783 /* MDSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSettings.h; sourceTree = "<group>"; };
@@ -126,7 +127,6 @@
 		3AA898D919BA14CE004E0892 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		3AA898EF19BA15EE004E0892 /* MDHomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDHomeVC.h; sourceTree = "<group>"; };
 		3AA898F019BA15EE004E0892 /* MDHomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDHomeVC.m; sourceTree = "<group>"; };
-		3AA898F219BA16DD004E0892 /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
 		3AA898F719BA1BE8004E0892 /* MDSystemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDSystemVC.h; sourceTree = "<group>"; };
 		3AA898F819BA1BE8004E0892 /* MDSystemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MDSystemVC.m; sourceTree = "<group>"; };
 		3AA898FA19BA1BF5004E0892 /* MDPremiseVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MDPremiseVC.h; sourceTree = "<group>"; };
@@ -158,7 +158,6 @@
 				3AA898BD19BA14CE004E0892 /* CoreGraphics.framework in Frameworks */,
 				3AA898BF19BA14CE004E0892 /* UIKit.framework in Frameworks */,
 				3AA898BB19BA14CE004E0892 /* Foundation.framework in Frameworks */,
-				3AA898F319BA16DD004E0892 /* NewRelicAgent.framework in Frameworks */,
 				79A51653FA7F409DAC2006FE /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -276,10 +275,11 @@
 		3AA898B919BA14CE004E0892 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3A68AC271AA3CB4700D38BAE /* CoreData.framework */,
+				3A68AC251AA3CB3F00D38BAE /* libc++.dylib */,
 				3AA8990119BA1C7F004E0892 /* CoreTelephony.framework */,
 				3AA898FF19BA1C78004E0892 /* libz.dylib */,
 				3AA898FD19BA1C71004E0892 /* SystemConfiguration.framework */,
-				3AA898F219BA16DD004E0892 /* NewRelicAgent.framework */,
 				3AA898BA19BA14CE004E0892 /* Foundation.framework */,
 				3AA898BC19BA14CE004E0892 /* CoreGraphics.framework */,
 				3AA898BE19BA14CE004E0892 /* UIKit.framework */,

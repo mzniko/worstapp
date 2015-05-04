@@ -38,7 +38,7 @@
 {
     [super viewDidLoad];
 
-    [NewRelic recordEvent:@"DemoPreview" withAttributes:@{@"demoName": self.targetName}];
+    [NewRelic recordEvent:@"DemoPreview" attributes:@{@"demoName": self.targetName}];
 
     NSString *filename = [[NSBundle mainBundle] pathForResource:self.targetName ofType:@"txt"];
 

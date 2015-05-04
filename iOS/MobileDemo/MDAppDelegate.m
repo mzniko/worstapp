@@ -72,9 +72,9 @@
         
         [NRMADemoTools setDeviceId:[MDSettings deviceUdid]];
 
-        [NewRelic setUsername:[MDSettings username]];
-        [NewRelic setUserId:[MDSettings userId]];
-        [NewRelic setUserEmail:[MDSettings email]];
+        [NewRelic setAttribute:@"username" value:[MDSettings username]];
+        [NewRelic setAttribute:@"userId" value:[MDSettings userId]];
+        [NewRelic setAttribute:@"email" value:[MDSettings email]];
     }
 }
 

@@ -35,7 +35,7 @@
 {
     [super viewDidLoad];
 
-    [NewRelic recordEvent:@"DemoView" withAttributes:@{@"name": @"Crashing Game"}];
+    [NewRelic recordEvent:@"DemoView" attributes:@{@"name": @"Crashing Game"}];
 
     // Do any additional setup after loading the view from its nib.
 
@@ -114,10 +114,21 @@
         if (i == lastTappedNumber + 1) {
             [self handleTappedNumber:i];
             b.hidden = YES;
+            
+            [NewRelic recordEvent:@"GamePlay" attributes:@{@"tappedNumber": [NSNumber numberWithLong:i],
+                                                           @"gameTime": [NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate] - gameStartedAt],
+                                                           @"point": @1,
+                                                           @"lastTappedNumber": [NSNumber numberWithLong:lastTappedNumber]
+                                                           }];
         }
         else {
             // TODO complain...
             gameSpeed = gameSpeed * 0.9;
+            [NewRelic recordEvent:@"GamePlay" attributes:@{@"tappedNumber": [NSNumber numberWithLong:i],
+                                                           @"gameTime": [NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate] - gameStartedAt],
+                                                           @"point": @0,
+                                                           @"lastTappedNumber": [NSNumber numberWithLong:lastTappedNumber]
+                                                           }];
         }
     }
 }
@@ -127,6 +138,11 @@
     running = NO;
     [self.timer invalidate];
     self.timer = nil;
+
+    [NewRelic recordEvent:@"GamePlay" attributes:@{@"gaveUp": @1,
+                                                   @"gameTime": [NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate] - gameStartedAt],
+                                                   @"lastTappedNumber": [NSNumber numberWithLong:lastTappedNumber]
+                                                   }];
 
     [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }

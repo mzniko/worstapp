@@ -31,7 +31,7 @@
 
 - (void) viewDidLoad
 {
-    [NewRelic recordEvent:@"DemoView" withAttributes:@{@"name": @"Image Gallery"}];
+    [NewRelic recordEvent:@"DemoView" attributes:@{@"name": @"Image Gallery"}];
 
     [MDUIHelpers stylizeButtonsInView:self.view];
 

@@ -16,15 +16,6 @@
 #define kAppToken @"MDAppToken"
 #define kDefaultStagingAppToken @"AA8af476cb7cab516d0e97bf9b429c51cfce88f672"
 
-#define kStagingInsightsCollector @"staging-insights-collector.newrelic.com"
-#define kStagingAccountId 340262
-#define kStagingAccountInsertKey @"Kl__l1ZW9edgH7ReODSFW-I9Vtl2o99t"
-
-#define kProductionInsightsCollector @"insights-collector.newrelic.com"
-#define kProductionAccountId 1
-#define kProductionAccountInsertKey @"o3txgeZWickYLJMym4TeORBERR9OXiPU"
-
-
 @implementation MDSettings
 
 
@@ -101,28 +92,6 @@
     else {
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:kUseProductionCollector];
     }
-}
-
-+ (NSString *)insightsInsertKey
-{
-    if ([MDSettings useProductionCollector])
-        return kProductionAccountInsertKey;
-    else
-        return kStagingAccountInsertKey;
-}
-+ (NSString *) insightsCollectorHostname
-{
-    if ([MDSettings useProductionCollector])
-        return kProductionInsightsCollector;
-    else
-        return kStagingInsightsCollector;
-}
-+ (NSInteger) insightsAccountId
-{
-    if ([MDSettings useProductionCollector])
-        return kProductionAccountId;
-    else
-        return kStagingAccountId;
 }
 
 
