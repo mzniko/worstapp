@@ -33,5 +33,8 @@
 + (NSString *)username;
 + (NSString *)email;
 + (NSString *)userId;
++ (NSString *)subscriptionLevel;
++ (NSString *)campaignId;
++ (NSString *)signupMonth;
 
 @end

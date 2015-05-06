@@ -75,6 +75,9 @@
         [NewRelic setAttribute:@"username" value:[MDSettings username]];
         [NewRelic setAttribute:@"userId" value:[MDSettings userId]];
         [NewRelic setAttribute:@"email" value:[MDSettings email]];
+        [NewRelic setAttribute:@"subscription" value:[MDSettings subscriptionLevel]];
+        [NewRelic setAttribute:@"campaign" value:[MDSettings campaignId]];
+        [NewRelic setAttribute:@"signupMonth" value:[MDSettings signupMonth]];
     }
 }
 
@@ -90,14 +93,7 @@
     [NewRelic startWithApplicationToken:[MDSettings appToken]
                     andCollectorAddress:[MDSettings collectorHostname]
                andCrashCollectorAddress:[MDSettings crashCollectorHostname]
-                                withSSL:YES];
-    // https://staging-insights.newrelic.com/accounts/340262/explorer/Mobile
-    [NewRelic startAnalyticsReportingWithInsertKey:[MDSettings insightsInsertKey]
-                              andCollectorHostname:[MDSettings insightsCollectorHostname]
-                                      andAccountId:[MDSettings insightsAccountId]];
-    
-
-    [NewRelic setAttribute:@"appName" value:@"Mobile Demo"];
+                                withSSL:YES];    
 
     NSString *interaction = NR_START_NAMED_INTERACTION(@"App Setup");
 

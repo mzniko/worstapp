@@ -128,6 +128,9 @@ static NSString *_udid = nil;
 static NSString *_username = nil;
 static NSString *_userid = nil;
 static NSString *_email = nil;
+static NSString *_subscriptionLevel = nil;
+static NSString *_campaignId = nil;
+static NSString *_signupMonth = nil;
 
 + (void)initUserInfo
 {
@@ -137,60 +140,90 @@ static NSString *_email = nil;
                 _username = @"Benjamin Button";
                 _userid = @"13324";
                 _email = @"bbutton@newrelic.com";
+                _subscriptionLevel = @"Pro";
+                _campaignId = @"WEB-101";
+                _signupMonth = @"April 2015";
                 break;
             case 1:
                 _udid = @"2D187A9D-E38C-46B8-92AC-BF0433E975D3";
                 _username = @"Sean Similar";
                 _userid = @"487";
                 _email = @"ssimilar@newrelic.com";
+                _subscriptionLevel = @"SMB";
+                _campaignId = @"TWITTER";
+                _signupMonth = @"March 2015";
                 break;
             case 2:
                 _udid = @"76567CB6-B07D-493C-85DF-6A5382A1515D";
                 _username = @"Lucy Lateral";
                 _userid = @"4362";
                 _email = @"llateral@newrelic.com";
+                _subscriptionLevel = @"Lite";
+                _campaignId = @"WEB-101";
+                _signupMonth = @"February 2015";
                 break;
             case 3:
                 _udid = @"D42449EA-F8E9-4581-82AD-B74BE5B9DE3A";
                 _username = @"Mark Manatee";
                 _userid = @"9773";
                 _email = @"mmanatee@newrelic.com";
+                _subscriptionLevel = @"Pro";
+                _campaignId = @"IN APP X-PROMO";
+                _signupMonth = @"March 2015";
                 break;
             case 4:
                 _udid = @"C61C0E01-CDCC-4862-8371-6D0285B2F9CD";
                 _username = @"Heinrich Hichart";
                 _userid = @"92907";
                 _email = @"hhichart@newrelic.com";
+                _subscriptionLevel = @"SMB";
+                _campaignId = @"IN APP X-PROMO";
+                _signupMonth = @"March 2015";
                 break;
             case 5:
                 _udid = @"847F537D-5837-4BB9-A671-23C8184A7DFA";
                 _username = @"Zoe Zookeeper";
                 _userid = @"29931";
                 _email = @"zzookeeper@newrelic.com";
+                _subscriptionLevel = @"Lite";
+                _campaignId = @"IN APP X-PROMO";
+                _signupMonth = @"March 2015";
                 break;
             case 6:
                 _udid = @"E65EC67F-C654-4A42-AFC8-947F94DA74FE";
                 _username = @"Ivan Intelligentsia";
                 _userid = @"923";
                 _email = @"iintelligentsia@newrelic.com";
+                _subscriptionLevel = @"Pro";
+                _campaignId = @"WEB-101";
+                _signupMonth = @"April 2015";
                 break;
             case 7:
                 _udid = @"44A46106-FFBD-4C83-AB31-76909B7AD5F7";
                 _username = @"Bob Beauchamp";
                 _userid = @"348957";
                 _email = @"bbeauchamp@newrelic.com";
+                _subscriptionLevel = @"SMB";
+                _campaignId = @"IN APP X-PROMO";
+                _signupMonth = @"March 2015";
                 break;
             case 8:
                 _udid = @"86FCACA8-09D8-4EC5-AF97-E3C19D9496EA";
                 _username = @"Kelly Koala";
                 _userid = @"348";
                 _email = @"kkoala@newrelic.com";
+                _subscriptionLevel = @"Lite";
+                _campaignId = @"WEB-101";
+                _signupMonth = @"May 2015";
                 break;
             case 9:
                 _udid = @"B5B7163C-9ECB-465C-8591-D1E3BB2CE302";
                 _username = @"Janice Juniper";
                 _userid = @"76522";
                 _email = @"jjuniper@newrelic.com";
+                _subscriptionLevel = @"Pro";
+                _campaignId = @"WEB-101";
+                _signupMonth = @"April 2015";
                 break;
         }
 }
@@ -210,6 +243,17 @@ static NSString *_email = nil;
 {
     return _userid;
 }
-
++ (NSString *)subscriptionLevel
+{
+    return _subscriptionLevel;
+}
++ (NSString *)signupMonth
+{
+    return _signupMonth;
+}
++ (NSString *)campaignId
+{
+    return _campaignId;
+}
 
 @end
