@@ -68,7 +68,7 @@
         return @"mobile-collector.newrelic.com";
     }
     else {
-        return @"staging-collector.newrelic.com";
+        return @"staging-mobile-collector.newrelic.com";
     }
 }
 + (NSString *)crashCollectorHostname
