@@ -14,7 +14,7 @@
 #define kDisableChameleon @"MDDisableChameleon"
 #define kCustomAppVersion @"MDCustomAppVersion"
 #define kAppToken @"MDAppToken"
-#define kDefaultStagingAppToken @"AA8af476cb7cab516d0e97bf9b429c51cfce88f672"
+#define kDefaultStagingAppToken @"AAdaadfffd66136dda8bf2122c7f15b960ff528cd4"
 
 @implementation MDSettings
 

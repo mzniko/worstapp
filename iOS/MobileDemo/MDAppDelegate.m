@@ -83,9 +83,9 @@
     [NRLogger setLogLevels:NRLogLevelInfo];
     
     // https://staging.newrelic.com/accounts/340262/mobile/64968/
-    [NewRelic startWithApplicationToken:[MDSettings appToken]
-                    andCollectorAddress:[MDSettings collectorHostname]
-               andCrashCollectorAddress:[MDSettings crashCollectorHostname]
+[NewRelic startWithApplicationToken:@"AAdaadfffd66136dda8bf2122c7f15b960ff528cd4"
+                    andCollectorAddress:@"mobile-collector.newrelic.com"
+               andCrashCollectorAddress:@"mobile-crash.newrelic.com"
                                 withSSL:YES];
     
     [NewRelic setAttribute:@"username" value:[MDSettings username]];

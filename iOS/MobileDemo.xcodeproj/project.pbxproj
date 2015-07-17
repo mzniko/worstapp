@@ -479,7 +479,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\nexport DSYM_UPLOAD_URL=\"staging-symbol-upload-api.awsdev.nr-ops.net/symbol\"\n/bin/bash \"${SCRIPT}\" \"AA8af476cb7cab516d0e97bf9b429c51cfce88f672\"\n";
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\n/bin/sh \"${SCRIPT}\" \"AAdaadfffd66136dda8bf2122c7f15b960ff528cd4\"";
 		};
 /* End PBXShellScriptBuildPhase section */
 
