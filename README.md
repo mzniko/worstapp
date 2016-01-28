@@ -1,10 +1,3 @@
-# Mobile Demo Apps
-
-Internally distributed demo apps for Mobile APM
-
-https://source.datanerd.us/mobile/mobile-demo-apps
-
-
 ## iOS
 
 To build the iOS mobile demo app you will need cocoapods.
